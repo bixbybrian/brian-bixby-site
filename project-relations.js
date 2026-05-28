@@ -41,7 +41,7 @@ const PROJECTS = {
     title: 'Glyph',
     year: '2018',
     medium: 'Photography',
-    image: '../images/Amazon-boxes-Bixby-404-1140-761b-e1699425062582.jpg',
+    image: '../images/Bixby-Glyph-01-HEADER.jpg',
     url: 'glyph.html'
   },
   'aldi': {
