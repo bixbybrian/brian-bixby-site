@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Bixby — Witness</title>
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <meta name="description" content="Witness is a site-specific project in the Viehauktionshalle (Cattle Auction Hall) in Weimar, Germany." />
+  <link rel="canonical" href="https://brianbixby.com/projects/witness" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Brian Bixby" />
+  <meta property="og:title" content="Brian Bixby — Witness" />
+  <meta property="og:description" content="Witness is a site-specific project in the Viehauktionshalle (Cattle Auction Hall) in Weimar, Germany." />
+  <meta property="og:url" content="https://brianbixby.com/projects/witness" />
+  <meta property="og:image" content="https://brianbixby.com/images/witness-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brian Bixby — Witness" />
+  <meta name="twitter:description" content="Witness is a site-specific project in the Viehauktionshalle (Cattle Auction Hall) in Weimar, Germany." />
+  <meta name="twitter:image" content="https://brianbixby.com/images/witness-1.jpg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111111; --mid: #555555; --light: #aaaaaa; --rule: #dddddd;
+      --bg: #ffffff; --accent: #03a9f4;
+      --font-serif: 'EB Garamond', Georgia, serif;
+      --font-sans: 'Outfit', Helvetica, sans-serif;
+      --max-w: 820px; --nav-h: 52px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--black); font-family: var(--font-sans);
+           font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--bg);
+          border-bottom: 1px solid var(--rule); height: var(--nav-h);
+          display: flex; align-items: center; justify-content: space-between; padding: 0 30px; }
+    .nav-logo { font-family: var(--font-sans); font-weight: 500; font-size: 17px;
+                letter-spacing: -0.01em; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 13.5px; font-weight: 400; color: var(--mid);
+                   text-decoration: none; letter-spacing: 0.01em; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-links a.active { font-weight: 500; }
+
+    /* BACK LINK */
+    .back-bar { max-width: var(--max-w); margin: 0 auto; padding: 24px 30px 0; }
+    .back-link { font-size: 13px; color: var(--mid); text-decoration: none;
+                 display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
+    .back-link:hover { color: var(--black); }
+    .back-link::before { content: '←'; font-size: 14px; }
+
+    /* MAIN */
+    main { max-width: var(--max-w); margin: 0 auto; padding: 36px 30px 100px; }
+
+    /* PROJECT TITLE */
+    .project-title { font-family: var(--font-serif); font-size: 38px; font-weight: 400;
+                     line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 36px; }
+
+    /* METADATA BLOCK — tombstone data below hero caption */
+    .project-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+                    gap: 18px 32px; padding-top: 20px; margin: 0 0 44px;
+                    border-top: 1px solid var(--rule); }
+    .project-meta > div { min-width: 0; }
+    .project-meta dt { font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
+                       text-transform: uppercase; color: var(--light); margin-bottom: 5px; }
+    .project-meta dd { font-size: 13.5px; color: var(--black); line-height: 1.5;
+                       font-weight: 300; }
+
+    /* HERO IMAGE — aspect ratio driven by the image file itself */
+    .hero-placeholder { width: 100%; margin-bottom: 10px; }
+    .hero-placeholder img { width: 100%; height: auto; display: block; }
+
+    /* CAPTION */
+    .caption { font-size: 12.5px; color: var(--mid); font-style: italic;
+               line-height: 1.5; margin-bottom: 40px; }
+    .caption em, .caption i { font-style: normal; }
+
+    /* GALLERY GRID */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+               gap: 2px; margin: 40px 0; }
+    .gallery-item { display: flex; flex-direction: column; }
+    .gallery-placeholder { width: 100%; overflow: hidden; background: #f0f0f0; }
+    .gallery-placeholder img { width: 100%; display: block; }
+    .gallery-caption { font-size: 11.5px; color: var(--mid); font-style: italic;
+                       padding: 8px 4px 12px; line-height: 1.45; }
+
+    /* BODY TEXT */
+    .project-body { font-size: 14.5px; font-weight: 300; line-height: 1.8;
+                    color: var(--black); margin-bottom: 36px; }
+    .project-body p { margin-bottom: 16px; }
+    .project-body em { font-style: italic; }
+    .project-body strong { font-weight: 500; }
+    .project-body a { color: var(--black); text-decoration: underline;
+                      text-underline-offset: 2px; }
+    .project-body a:hover { color: var(--accent); }
+    .project-body blockquote { border-left: 2px solid var(--rule); padding-left: 20px;
+                                color: var(--mid); font-style: italic; margin: 24px 0; }
+
+    /* SECTION LABEL */
+    .section-label { font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
+                     text-transform: uppercase; color: var(--light); margin-bottom: 14px; }
+
+    /* FOOTNOTES */
+    .footnotes { border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 48px; }
+    .footnotes .section-label { margin-bottom: 16px; }
+    .footnote { font-size: 13px; color: var(--mid); line-height: 1.65; margin-bottom: 10px; }
+    .footnote a { color: var(--mid); text-decoration: underline; text-underline-offset: 2px; }
+    .footnote a:hover { color: var(--black); }
+    .footnote em { font-style: italic; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--rule); max-width: var(--max-w); margin: 0 auto;
+             padding: 24px 30px; display: flex; justify-content: space-between;
+             align-items: center; font-size: 12px; color: var(--light); font-weight: 300; }
+    footer a { color: var(--light); text-decoration: none; }
+    footer a:hover { color: var(--mid); }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
+      .project-title { font-size: 28px; }
+      .project-meta { grid-template-columns: 1fr; gap: 14px 0; }
+      .gallery { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 6px; text-align: center; }
+    }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">Brian Bixby</a>
+      <ul class="nav-links">
+        <li><a href="../projects.html" class="active">Projects</a></li>
+        <li><a href="../info.html">Info</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <div class="back-bar">
+    <a href="../projects.html" class="back-link">All Projects</a>
+  </div>
+
+  <main>
+    <h1 class="project-title">Witness</h1>
+
+    <div class="hero-placeholder"><img src="/.netlify/images?url=/images/witness-1.jpg&w=960&q=78" srcset="/.netlify/images?url=/images/witness-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/witness-1.jpg&w=960&q=78 960w, /.netlify/images?url=/images/witness-1.jpg&w=1280&q=78 1280w" sizes="(min-width: 820px) 760px, 100vw" alt="Witness" width="1280" height="905" fetchpriority="high" /></div>
+    <p class="caption"><em>Witness</em>, installation view, Viehauktionshalle, Marcel-Paul-Str. 57, Weimar, Germany. Materials: peep-hole, wood window frames, black and white Xerox prints, cardboard, tape, glue, fluorescent paint.</p>
+
+    <dl class="project-meta">
+      <div><dt>Year</dt><dd>2014</dd></div>
+      <div><dt>Format</dt><dd>Site-specific installation</dd></div>
+      <div><dt>Location</dt><dd>Viehauktionshalle, Weimar, Germany</dd></div>
+    </dl>
+
+    <div class="section-label">Project Overview</div>
+    <div class="project-body">
+        <p><em>Witness</em> is a site-specific project in the Viehauktionshalle (Cattle Auction Hall) in Weimar, Germany. The ground area of the building is 35 × 70 meters and 25 meters high. Up to 3000 people can fit inside. Its unique wooden lightweight construction means the entire interior space is column free. According to records, this hall was (at the time of this installation) the biggest building in Weimar with a light roof.</p>
+        <p>To preserve its history the Viehauktionshalle was recently designated as a historic landmark. Despite this designation, in 2014 the building sits in a state of decay and trash, littered with broken glass and VHS tapes. It is also forbidden to enter the building. I spent several afternoons at the site doing my own investigation, collecting materials around the building and taking photographs. Spending time alone there I felt as if I were trespassing onto the site of a crime, always looking over my shoulder. I wanted to give viewers a similar feeling, that they were experiencing something forbidden.</p>
+        <p>I installed a small peephole into one of the doors facing inwards and marked it with fluorescent pink paint. The peephole flattens and miniaturizes the scene behind the glass. What you see when you look through the peephole is a vision of the Viehauktionshalle building as you've never seen it before. It is dark inside but there are many small holes in the roof, through the glass this appears as a beautiful starscape.</p>
+        <p>Framed photographs lean against the wall outside of the door. These photographs are displayed in discarded window frames I found scattered around the building. The photographs are Xerox copied reproductions which were taken at the exact site where they are placed. The largest photograph shows the steps leading up to the broken door and against the door leans an empty window frame. This is the same frame, in the same position, that now displays this photograph. There is a type of manipulation of time as we see a photo of a photo which has been placed back into its original setting.</p>
+        <p>In 2015 the Viehauktionshalle burned down. According to official reports the fire was started by a group of teenagers.</p>
+    </div>
+
+    <div class="gallery">
+    <div class="gallery-item">
+      <div class="gallery-placeholder"><img src="/.netlify/images?url=/images/IMG_6116.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/IMG_6116.jpg&w=400&q=78 400w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness — installation view with peephole" width="400" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-caption"><em>Witness</em>, installation view, Viehauktionshalle, Weimar, Germany.</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder"><img src="/.netlify/images?url=/images/IMG_6101.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/IMG_6101.jpg&w=400&q=78 400w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness — two framed photographs" width="400" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-caption"><em>Witness</em>, installation view, Viehauktionshalle, Weimar, Germany.</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder"><img src="/.netlify/images?url=/images/IMG_6125.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/IMG_6125.jpg&w=400&q=78 400w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness — framed photograph in window frame" width="400" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-caption"><em>Witness</em>, installation view, Viehauktionshalle, Weimar, Germany.</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder"><img src="/.netlify/images?url=/images/IMG_6133.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/IMG_6133.jpg&w=400&q=78 400w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness — framed photograph in window frame" width="400" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-caption"><em>Witness</em>, installation view, Viehauktionshalle, Weimar, Germany.</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder"><img src="/.netlify/images?url=/images/IMG_5837.jpg&w=800&q=78" srcset="/.netlify/images?url=/images/IMG_5837.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_5837.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_5837.jpg&w=800&q=78 800w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness — discarded window frame in grass" width="800" height="533" loading="lazy" decoding="async" /></div>
+      <div class="gallery-caption"><em>Witness</em>, installation view, Viehauktionshalle, Weimar, Germany.</div>
+    </div>
+  </div>
+
+    
+  </main>
+
+  <footer>
+    <span>Artwork and Text Copyright Brian Bixby. All rights reserved 2026.</span>
+</footer>
+
+
+  <script>const PROJECT_SLUG = 'witness';</script>
+  <script src="../project-relations.js"></script>
+</body>
+</html>

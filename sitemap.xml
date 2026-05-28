@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://brianbixby.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://brianbixby.com/projects</loc><priority>0.9</priority></url>
+  <url><loc>https://brianbixby.com/info</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/contact</loc><priority>0.7</priority></url>
+
+  <!-- Project pages -->
+  <url><loc>https://brianbixby.com/projects/lightvessel</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/unseen-unfelt</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/forbidden-colours</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/apparition</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/glyph</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/aldi</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/autumn-fires</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/portal</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/i-want-to-believe</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/witness</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/dream-therapy</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/mechanical-postcard</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/the-lion</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/wolf-man-in-forest</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/ruminants</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/schwarz-zimmer</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/archaeology-excavation-and-what-remains</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/lustmord</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/inflorescence</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/in-the-darkest-places</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/shedding</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/walter-benjamin-in-the-mall-of-america</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/memory-of-a-desert-journey</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/interference</loc><priority>0.8</priority></url>
+  <url><loc>https://brianbixby.com/projects/apperception</loc><priority>0.8</priority></url>
+
+</urlset>

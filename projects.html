@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Bixby — Projects</title>
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <meta name="description" content="Selected works and archive of projects by Brian Bixby, spanning photography, installation, painting, video, and constructed objects." />
+  <link rel="canonical" href="https://brianbixby.com/projects" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Brian Bixby" />
+  <meta property="og:title" content="Brian Bixby — Projects" />
+  <meta property="og:description" content="Selected works and archive of projects by Brian Bixby, spanning photography, installation, painting, video, and constructed objects." />
+  <meta property="og:url" content="https://brianbixby.com/projects" />
+  <meta property="og:image" content="https://brianbixby.com/images/apparition-1140-761.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brian Bixby — Projects" />
+  <meta name="twitter:description" content="Selected works and archive of projects by Brian Bixby, spanning photography, installation, painting, video, and constructed objects." />
+  <meta name="twitter:image" content="https://brianbixby.com/images/apparition-1140-761.jpg" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #111111;
+      --mid: #555555;
+      --light: #aaaaaa;
+      --rule: #dddddd;
+      --bg: #ffffff;
+      --accent: #03a9f4;
+      --font-serif: 'EB Garamond', Georgia, serif;
+      --font-sans: 'Outfit', Helvetica, sans-serif;
+      --max-w: 1100px;
+      --nav-h: 52px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--black); font-family: var(--font-sans);
+           font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg); border-bottom: 1px solid var(--rule);
+      height: var(--nav-h); display: flex; align-items: center;
+      justify-content: space-between; padding: 0 36px;
+    }
+    .nav-logo { font-family: var(--font-sans); font-weight: 500; font-size: 17px;
+                letter-spacing: -0.01em; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 13.5px; font-weight: 400; color: var(--mid);
+                   text-decoration: none; letter-spacing: 0.01em; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-links a.active { font-weight: 500; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 52px 36px 44px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .page-count {
+      font-size: 12px;
+      color: var(--light);
+      font-weight: 300;
+      white-space: nowrap;
+    }
+
+    /* ── SECTION LABELS ── */
+    .section-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 44px 0 18px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 0;
+    }
+
+    .section-label {
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+    }
+
+    .section-desc {
+      font-size: 12.5px;
+      color: var(--light);
+      font-weight: 300;
+    }
+
+    /* ══════════════════════════════════════════
+       FEATURED WORKS — 2-column editorial grid
+    ══════════════════════════════════════════ */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-bottom: 0;
+    }
+
+    /* First featured card: full-width */
+    .featured-card.full {
+      grid-column: span 2;
+    }
+    .featured-card.full .feat-img {
+      aspect-ratio: 21/9;
+    }
+
+    .featured-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      background: #f2f2f2;
+    }
+
+    .feat-img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      overflow: hidden;
+      background: #e0e0e0;
+    }
+
+    .feat-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .featured-card:hover .feat-img img { transform: scale(1.035); }
+
+    .feat-info {
+      padding: 22px 24px 28px;
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+    }
+
+    .feat-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .feat-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--black);
+    }
+
+    .feat-meta {
+      font-size: 12px;
+      color: var(--light);
+      font-weight: 300;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .feat-desc {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .feat-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .feat-link::after { content: '→'; font-size: 11px; }
+    .feat-link:hover { color: var(--black); border-bottom-color: var(--black); }
+
+    /* ══════════════════════════════════════════
+       ARCHIVE — compact 3-column grid
+    ══════════════════════════════════════════ */
+    .archive-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font-sans); font-size: 12.5px; font-weight: 400;
+      color: var(--light); padding: 6px 0; margin-right: 22px;
+      letter-spacing: 0.02em; white-space: nowrap;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .filter-btn:hover { color: var(--mid); }
+    .filter-btn.active { color: var(--black); font-weight: 500; border-bottom-color: var(--black); }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 1px;
+    }
+
+    .archive-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      background: #f2f2f2;
+    }
+    .archive-card.hidden { display: none; }
+
+    .arch-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #e0e0e0;
+      overflow: hidden;
+    }
+    .arch-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .archive-card:hover .arch-img img { transform: scale(1.04); }
+
+    .arch-info {
+      padding: 13px 14px 16px;
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+    }
+    .arch-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--black);
+      margin-bottom: 3px;
+    }
+    .arch-meta {
+      font-size: 11.5px;
+      color: var(--light);
+      font-weight: 300;
+    }
+
+    /* ── ARCHIVE DIVIDER ── */
+    .archive-section {
+      padding-bottom: 100px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .archive-section .section-head,
+    .archive-section .archive-controls {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 24px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--light);
+      font-weight: 300;
+    }
+    footer a { color: var(--light); text-decoration: none; }
+    footer a:hover { color: var(--mid); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .featured-grid { grid-template-columns: 1fr; }
+      .featured-card.full { grid-column: span 1; }
+      .featured-card.full .feat-img { aspect-ratio: 3/2; }
+      .archive-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 580px) {
+      nav, .page-header, .section-wrap, footer { padding-left: 20px; padding-right: 20px; }
+      .archive-section { padding-left: 0; padding-right: 0; }
+      .archive-section .section-head,
+      .archive-section .archive-controls { padding-left: 20px; padding-right: 20px; }
+      .page-title { font-size: 28px; }
+      .feat-info { padding: 16px 18px 22px; }
+      .feat-header { flex-direction: column; gap: 4px; }
+      .feat-meta { white-space: normal; }
+      .archive-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Brian Bixby</a>
+    <ul class="nav-links">
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <div class="page-header">
+    <h1 class="page-title">Projects</h1>
+    <span class="page-count">Image · Object · Installation · Video</span>
+  </div>
+
+  <!-- ════════════════════════════════════
+       FEATURED WORKS
+  ════════════════════════════════════ -->
+  <div class="section-wrap">
+    <div class="section-head" style="border-bottom: none;">
+      <span class="section-label">Selected Works</span>
+    </div>
+  </div>
+
+  <div class="section-wrap" style="padding-left:0;padding-right:0;">
+    <div class="featured-grid">
+
+      <!-- ① Full-width lead — Apparition -->
+      <a class="featured-card full" href="projects/apparition.html">
+        <div class="feat-img">
+          <img src="/.netlify/images?url=/images/apparition-1140-761.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/apparition-1140-761.jpg&w=400&q=78 400w, /.netlify/images?url=/images/apparition-1140-761.jpg&w=640&q=78 640w, /.netlify/images?url=/images/apparition-1140-761.jpg&w=900&q=78 900w, /.netlify/images?url=/images/apparition-1140-761.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Apparition" width="1140" height="761" loading="lazy" decoding="async" />
+        </div>
+        <div class="feat-info" style="max-width:var(--max-w);margin:0 auto;padding-left:36px;padding-right:36px;">
+          <div class="feat-header">
+            <div class="feat-title">Apparition</div>
+            <div class="feat-meta">2019 &nbsp;·&nbsp; Installation</div>
+          </div>
+          <p class="feat-desc">A 1:1 scale portrait that dissolves as the viewer approaches, triggered by a motion sensor. Shown during the Bauhaus 100-year jubilee in the original classroom building in Weimar, the work is a meditation on looking itself — the ghost can only be seen from a distance, and vanishes at the moment of recognition.</p>
+          <span class="feat-link">View project</span>
+        </div>
+      </a>
+
+      <!-- ② Lightvessel -->
+      <a class="featured-card" href="projects/lightvessel.html">
+        <div class="feat-img">
+          <img src="/.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Lightvessel" width="1140" height="760" loading="lazy" decoding="async" />
+        </div>
+        <div class="feat-info">
+          <div class="feat-header">
+            <div class="feat-title">Lightvessel</div>
+            <div class="feat-meta">2021 &nbsp;·&nbsp; Sculpture / NFT</div>
+          </div>
+          <p class="feat-desc">Wall-mounted sculptures pairing Duratrans film, etched Plexiglas, and low-energy LED with NFTs on the Ethereum blockchain. Presented as the final work of Bixby's Master's Thesis at Bauhaus-Universität Weimar, the series photographs natural elements in states of decay and transformation.</p>
+          <span class="feat-link">View project</span>
+        </div>
+      </a>
+
+      <!-- ③ Witness -->
+      <a class="featured-card" href="projects/witness.html">
+        <div class="feat-img">
+          <img src="/.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=400&q=78 400w, /.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=640&q=78 640w, /.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=900&q=78 900w, /.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness" width="1140" height="761" loading="lazy" decoding="async" />
+        </div>
+        <div class="feat-info">
+          <div class="feat-header">
+            <div class="feat-title">Witness</div>
+            <div class="feat-meta">2014 &nbsp;·&nbsp; Installation</div>
+          </div>
+          <p class="feat-desc">A site-specific intervention in Weimar's largest building — a condemned cattle auction hall forbidden to enter. A peephole drilled into a locked door, photographs displayed in salvaged window frames. In 2015 the building burned down, making the documentation the only record of the space as it was.</p>
+          <span class="feat-link">View project</span>
+        </div>
+      </a>
+
+      <!-- ④ Forbidden Colours -->
+      <a class="featured-card" href="projects/forbidden-colours.html">
+        <div class="feat-img">
+          <img src="/.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Forbidden Colours" width="1140" height="761" loading="lazy" decoding="async" />
+        </div>
+        <div class="feat-info">
+          <div class="feat-header">
+            <div class="feat-title">Forbidden Colours</div>
+            <div class="feat-meta">2019 &nbsp;·&nbsp; Photography</div>
+          </div>
+          <p class="feat-desc">Medium format photographs made in studio from gelatin, shampoo, glitter, and acrylic paint — compositions that dissolved under studio lights after several hours, leaving only the image. The series draws on Moholy-Nagy's Neues Sehen, proposing the camera as a way of seeing the world that the human eye alone cannot access.</p>
+          <span class="feat-link">View project</span>
+        </div>
+      </a>
+
+      <!-- ⑤ The Lion -->
+      <a class="featured-card" href="projects/the-lion.html">
+        <div class="feat-img">
+          <img src="/.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=950&q=78" srcset="/.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=400&q=78 400w, /.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=640&q=78 640w, /.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=900&q=78 900w, /.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=950&q=78 950w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="The Lion" width="950" height="761" loading="lazy" decoding="async" />
+        </div>
+        <div class="feat-info">
+          <div class="feat-header">
+            <div class="feat-title">The Lion</div>
+            <div class="feat-meta">2015 &nbsp;·&nbsp; Photography</div>
+          </div>
+          <p class="feat-desc">A long-term portrait series documenting one man's story from royalty to poverty in Rudolstadt, Germany. Shot over several years of visits with an analog Mamiya medium format camera, the work follows the last remaining ancestor of a royal bloodline as he fights to keep his 100-room family home.</p>
+          <span class="feat-link">View project</span>
+        </div>
+      </a>
+
+      <!-- ⑥ Mechanical Postcard -->
+      <a class="featured-card" href="projects/mechanical-postcard.html">
+        <div class="feat-img">
+          <img src="/.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=1083&q=78" srcset="/.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=400&q=78 400w, /.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=640&q=78 640w, /.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=900&q=78 900w, /.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=1083&q=78 1083w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Mechanical Postcard" width="1083" height="761" loading="lazy" decoding="async" />
+        </div>
+        <div class="feat-info">
+          <div class="feat-header">
+            <div class="feat-title">Mechanical Postcard</div>
+            <div class="feat-meta">2015 &nbsp;·&nbsp; Mixed Media</div>
+          </div>
+          <p class="feat-desc">A distributed drawing project: 36 strangers are each given a single panel of an image and asked to draw it by hand, then mail it back. The assembled result is a collective drawing made by people who never met. Inspired by "The Turk" — the 18th-century chess automaton later revealed to hide a human operator.</p>
+          <span class="feat-link">View project</span>
+        </div>
+      </a>
+
+    </div><!-- /.featured-grid -->
+  </div>
+
+  <!-- ════════════════════════════════════
+       ARCHIVE
+  ════════════════════════════════════ -->
+  <div class="section-wrap archive-section">
+    <div class="section-head" style="padding-top:64px;">
+      <span class="section-label">Archive</span>
+      <span class="section-desc">All works</span>
+    </div>
+
+    <div class="archive-controls">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Installation">Installation</button>
+        <button class="filter-btn" data-filter="Mixed Media">Mixed Media</button>
+        <button class="filter-btn" data-filter="Painting">Painting</button>
+        <button class="filter-btn" data-filter="Photography">Photography</button>
+        <button class="filter-btn" data-filter="Video">Video</button>
+      </div>
+    </div>
+
+    <div class="archive-grid">
+
+      <a class="archive-card" href="projects/lightvessel.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/363A0540-lightvessel-duratrans1.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Lightvessel" width="1140" height="760" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Lightvessel</div>
+          <div class="arch-meta">2021 &nbsp;·&nbsp; Sculpture / NFT</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/unseen-unfelt.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/ArakiimErotikfachgeschaeft_Ausstellung_12.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/ArakiimErotikfachgeschaeft_Ausstellung_12.jpg&w=400&q=78 400w, /.netlify/images?url=/images/ArakiimErotikfachgeschaeft_Ausstellung_12.jpg&w=640&q=78 640w, /.netlify/images?url=/images/ArakiimErotikfachgeschaeft_Ausstellung_12.jpg&w=900&q=78 900w, /.netlify/images?url=/images/ArakiimErotikfachgeschaeft_Ausstellung_12.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Unseen/Unfelt" width="1140" height="760" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Unseen/Unfelt</div>
+          <div class="arch-meta">2020 &nbsp;·&nbsp; Photography</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/forbidden-colours.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/forbidden_colours-blue-1140x761-1.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Forbidden Colours" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Forbidden Colours</div>
+          <div class="arch-meta">2019 &nbsp;·&nbsp; Photography</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/apparition.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/apparition-1140-761.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/apparition-1140-761.jpg&w=400&q=78 400w, /.netlify/images?url=/images/apparition-1140-761.jpg&w=640&q=78 640w, /.netlify/images?url=/images/apparition-1140-761.jpg&w=900&q=78 900w, /.netlify/images?url=/images/apparition-1140-761.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Apparition" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Apparition</div>
+          <div class="arch-meta">2019 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/glyph.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/Amazon-boxes-Bixby-404-1140-761b-e1699425062582.jpg&w=507&q=78" srcset="/.netlify/images?url=/images/Amazon-boxes-Bixby-404-1140-761b-e1699425062582.jpg&w=400&q=78 400w, /.netlify/images?url=/images/Amazon-boxes-Bixby-404-1140-761b-e1699425062582.jpg&w=507&q=78 507w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Glyph" width="507" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Glyph</div>
+          <div class="arch-meta">2018 &nbsp;·&nbsp; Photography</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/aldi.html" data-cat="Mixed Media">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/aldi-nord-1140-761b-e1699424900379.jpg&w=765&q=78" srcset="/.netlify/images?url=/images/aldi-nord-1140-761b-e1699424900379.jpg&w=400&q=78 400w, /.netlify/images?url=/images/aldi-nord-1140-761b-e1699424900379.jpg&w=640&q=78 640w, /.netlify/images?url=/images/aldi-nord-1140-761b-e1699424900379.jpg&w=765&q=78 765w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="ALDI Nord I" width="765" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">ALDI Nord I</div>
+          <div class="arch-meta">2018 &nbsp;·&nbsp; Mixed Media</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/autumn-fires.html" data-cat="Painting">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/Untitled-Blue-Painting-1140-761-1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/Untitled-Blue-Painting-1140-761-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/Untitled-Blue-Painting-1140-761-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/Untitled-Blue-Painting-1140-761-1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/Untitled-Blue-Painting-1140-761-1.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Autumn Fires" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Autumn Fires</div>
+          <div class="arch-meta">2018 &nbsp;·&nbsp; Painting</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/portal.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/portal-1140-761-IMG_9150b-e1699425136837.jpg&w=625&q=78" srcset="/.netlify/images?url=/images/portal-1140-761-IMG_9150b-e1699425136837.jpg&w=400&q=78 400w, /.netlify/images?url=/images/portal-1140-761-IMG_9150b-e1699425136837.jpg&w=625&q=78 625w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Portal" width="625" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Portal</div>
+          <div class="arch-meta">2017 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/i-want-to-believe.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=439&q=78" srcset="/.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=400&q=78 400w, /.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=439&q=78 439w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="I Want To Believe" width="439" height="650" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">I Want To Believe</div>
+          <div class="arch-meta">2017 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/witness.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=400&q=78 400w, /.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=640&q=78 640w, /.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=900&q=78 900w, /.netlify/images?url=/images/witness-1140-761-IMG_6097.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Witness" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Witness</div>
+          <div class="arch-meta">2014 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/dream-therapy.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/dream-therapy-3.jpg&w=1200&q=78" srcset="/.netlify/images?url=/images/dream-therapy-3.jpg&w=400&q=78 400w, /.netlify/images?url=/images/dream-therapy-3.jpg&w=640&q=78 640w, /.netlify/images?url=/images/dream-therapy-3.jpg&w=900&q=78 900w, /.netlify/images?url=/images/dream-therapy-3.jpg&w=1200&q=78 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Dream Therapy" width="1280" height="854" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Dream Therapy</div>
+          <div class="arch-meta">2015 &nbsp;·&nbsp; Photography</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/mechanical-postcard.html" data-cat="Mixed Media">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=1083&q=78" srcset="/.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=400&q=78 400w, /.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=640&q=78 640w, /.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=900&q=78 900w, /.netlify/images?url=/images/mechanical-postcard-1140-761-e1699425299142.jpg&w=1083&q=78 1083w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Mechanical Postcard" width="1083" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Mechanical Postcard</div>
+          <div class="arch-meta">2015 &nbsp;·&nbsp; Mixed Media</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/the-lion.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=950&q=78" srcset="/.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=400&q=78 400w, /.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=640&q=78 640w, /.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=900&q=78 900w, /.netlify/images?url=/images/The-Lion-18-Series-Header-e1699425377820.jpg&w=950&q=78 950w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="The Lion" width="950" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">The Lion</div>
+          <div class="arch-meta">2015 &nbsp;·&nbsp; Photography</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/wolf-man-in-forest.html" data-cat="Painting">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/wolfman-in-forest-1140-761-e1699425448561.jpg&w=900&q=78" srcset="/.netlify/images?url=/images/wolfman-in-forest-1140-761-e1699425448561.jpg&w=400&q=78 400w, /.netlify/images?url=/images/wolfman-in-forest-1140-761-e1699425448561.jpg&w=640&q=78 640w, /.netlify/images?url=/images/wolfman-in-forest-1140-761-e1699425448561.jpg&w=900&q=78 900w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Wolf Man In Forest" width="900" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Wolf Man In Forest</div>
+          <div class="arch-meta">2013 &nbsp;·&nbsp; Painting</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/schwarz-zimmer.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/schwartz-zimmer-1140-761-IMG_1953.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/schwartz-zimmer-1140-761-IMG_1953.jpg&w=400&q=78 400w, /.netlify/images?url=/images/schwartz-zimmer-1140-761-IMG_1953.jpg&w=640&q=78 640w, /.netlify/images?url=/images/schwartz-zimmer-1140-761-IMG_1953.jpg&w=900&q=78 900w, /.netlify/images?url=/images/schwartz-zimmer-1140-761-IMG_1953.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Schwarz Zimmer" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Schwarz Zimmer</div>
+          <div class="arch-meta">2013 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/archaeology-excavation-and-what-remains.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/archaeology-1140-761-IMG_0994-e1699425585513.jpg&w=1075&q=78" srcset="/.netlify/images?url=/images/archaeology-1140-761-IMG_0994-e1699425585513.jpg&w=400&q=78 400w, /.netlify/images?url=/images/archaeology-1140-761-IMG_0994-e1699425585513.jpg&w=640&q=78 640w, /.netlify/images?url=/images/archaeology-1140-761-IMG_0994-e1699425585513.jpg&w=900&q=78 900w, /.netlify/images?url=/images/archaeology-1140-761-IMG_0994-e1699425585513.jpg&w=1075&q=78 1075w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Archaeology, Excavation and What Remains" width="1075" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Archaeology, Excavation and What Remains</div>
+          <div class="arch-meta">2012 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/lustmord.html" data-cat="Installation">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/Archaeology-1140-761-P1160410.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/Archaeology-1140-761-P1160410.jpg&w=400&q=78 400w, /.netlify/images?url=/images/Archaeology-1140-761-P1160410.jpg&w=640&q=78 640w, /.netlify/images?url=/images/Archaeology-1140-761-P1160410.jpg&w=900&q=78 900w, /.netlify/images?url=/images/Archaeology-1140-761-P1160410.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Lustmord" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Lustmord</div>
+          <div class="arch-meta">2012 &nbsp;·&nbsp; Installation</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/inflorescence.html" data-cat="Photography">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/infloresence-1140-761-IMG_6172-28.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/infloresence-1140-761-IMG_6172-28.jpg&w=400&q=78 400w, /.netlify/images?url=/images/infloresence-1140-761-IMG_6172-28.jpg&w=640&q=78 640w, /.netlify/images?url=/images/infloresence-1140-761-IMG_6172-28.jpg&w=900&q=78 900w, /.netlify/images?url=/images/infloresence-1140-761-IMG_6172-28.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Inflorescence" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Inflorescence</div>
+          <div class="arch-meta">2012 &nbsp;·&nbsp; Photography</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/in-the-darkest-places.html" data-cat="Painting">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg&w=505&q=78" srcset="/.netlify/images?url=/images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg&w=400&q=78 400w, /.netlify/images?url=/images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg&w=505&q=78 505w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="In The Darkest Places" width="505" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">In The Darkest Places</div>
+          <div class="arch-meta">2012 &nbsp;·&nbsp; Painting</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/shedding.html" data-cat="Video">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=1027&q=78" srcset="/.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=400&q=78 400w, /.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=640&q=78 640w, /.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=900&q=78 900w, /.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=1027&q=78 1027w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Shedding" width="1027" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Shedding</div>
+          <div class="arch-meta">2011 &nbsp;·&nbsp; Video</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/walter-benjamin-in-the-mall-of-america.html" data-cat="Mixed Media">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/Mall-of-America-1140-761-IMG_7804.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/Mall-of-America-1140-761-IMG_7804.jpg&w=400&q=78 400w, /.netlify/images?url=/images/Mall-of-America-1140-761-IMG_7804.jpg&w=640&q=78 640w, /.netlify/images?url=/images/Mall-of-America-1140-761-IMG_7804.jpg&w=900&q=78 900w, /.netlify/images?url=/images/Mall-of-America-1140-761-IMG_7804.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Walter Benjamin in the Mall of America" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Walter Benjamin in the Mall of America</div>
+          <div class="arch-meta">2012 &nbsp;·&nbsp; Mixed Media</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/memory-of-a-desert-journey.html" data-cat="Video">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/desert-journey-1140-761-IMG_5211.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/desert-journey-1140-761-IMG_5211.jpg&w=400&q=78 400w, /.netlify/images?url=/images/desert-journey-1140-761-IMG_5211.jpg&w=640&q=78 640w, /.netlify/images?url=/images/desert-journey-1140-761-IMG_5211.jpg&w=900&q=78 900w, /.netlify/images?url=/images/desert-journey-1140-761-IMG_5211.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Memory of a Desert Journey" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Memory of a Desert Journey</div>
+          <div class="arch-meta">2011 &nbsp;·&nbsp; Video</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/interference.html" data-cat="Video">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/interference-install-view-1-1140-761-cover.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/interference-install-view-1-1140-761-cover.jpg&w=400&q=78 400w, /.netlify/images?url=/images/interference-install-view-1-1140-761-cover.jpg&w=640&q=78 640w, /.netlify/images?url=/images/interference-install-view-1-1140-761-cover.jpg&w=900&q=78 900w, /.netlify/images?url=/images/interference-install-view-1-1140-761-cover.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Interference" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Interference</div>
+          <div class="arch-meta">2011 &nbsp;·&nbsp; Video</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/ruminants.html" data-cat="Mixed Media">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/Ruminants-Cover1-e1699425521337.jpg&w=571&q=78" srcset="/.netlify/images?url=/images/Ruminants-Cover1-e1699425521337.jpg&w=400&q=78 400w, /.netlify/images?url=/images/Ruminants-Cover1-e1699425521337.jpg&w=571&q=78 571w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Ruminants" width="571" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Ruminants</div>
+          <div class="arch-meta">2014 &nbsp;·&nbsp; Mixed Media</div>
+        </div>
+      </a>
+
+      <a class="archive-card" href="projects/apperception.html" data-cat="Video">
+        <div class="arch-img"><img src="/.netlify/images?url=/images/apperception01-install-1140-761-cover.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/apperception01-install-1140-761-cover.jpg&w=400&q=78 400w, /.netlify/images?url=/images/apperception01-install-1140-761-cover.jpg&w=640&q=78 640w, /.netlify/images?url=/images/apperception01-install-1140-761-cover.jpg&w=900&q=78 900w, /.netlify/images?url=/images/apperception01-install-1140-761-cover.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Apperception" width="1140" height="761" loading="lazy" decoding="async" /></div>
+        <div class="arch-info">
+          <div class="arch-title">Apperception</div>
+          <div class="arch-meta">2011 &nbsp;·&nbsp; Video</div>
+        </div>
+      </a>
+
+    </div><!-- /.archive-grid -->
+  </div><!-- /.section-wrap -->
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>Artwork and Text Copyright Brian Bixby. All rights reserved 2026.</span>
+</footer>
+
+  <script>
+    // Archive filter
+    const btns  = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.archive-card');
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.cat === filter;
+          card.classList.toggle('hidden', !match);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

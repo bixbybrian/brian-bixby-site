@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Bixby — Info</title>
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <meta name="description" content="Biography and CV of Brian Bixby — artist, curator, and co-founder of Bauhaus NEXT100. Studied Media Art and Design at Bauhaus-Universität Weimar." />
+  <link rel="canonical" href="https://brianbixby.com/info" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Brian Bixby" />
+  <meta property="og:title" content="Brian Bixby — Info" />
+  <meta property="og:description" content="Biography and CV of Brian Bixby — artist, curator, and co-founder of Bauhaus NEXT100. Studied Media Art and Design at Bauhaus-Universität Weimar." />
+  <meta property="og:url" content="https://brianbixby.com/info" />
+  <meta property="og:image" content="https://brianbixby.com/images/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brian Bixby — Info" />
+  <meta name="twitter:description" content="Biography and CV of Brian Bixby — artist, curator, and co-founder of Bauhaus NEXT100. Studied Media Art and Design at Bauhaus-Universität Weimar." />
+  <meta name="twitter:image" content="https://brianbixby.com/images/hero.jpg" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #111111;
+      --mid: #555555;
+      --light: #aaaaaa;
+      --rule: #dddddd;
+      --bg: #ffffff;
+      --accent: #03a9f4;
+      --font-serif: 'EB Garamond', Georgia, serif;
+      --font-sans: 'Outfit', Helvetica, sans-serif;
+      --max-w: 760px;
+      --nav-h: 52px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--black);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--mid);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--black);
+    }
+
+    .nav-links a.active {
+      font-weight: 500;
+    }
+
+    .nav-social {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-social a {
+      color: var(--mid);
+      transition: color 0.15s;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-social a:hover {
+      color: var(--black);
+    }
+
+    .nav-social svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 60px 30px 120px;
+    }
+
+    /* ── STATEMENT ── */
+    .statement-block {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .statement-label {
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 20px;
+    }
+
+    .statement-text {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.72;
+      color: var(--black);
+      max-width: 640px;
+    }
+
+    /* ── BIO ── */
+    .bio-block {
+      margin-bottom: 48px;
+    }
+
+    .bio-label {
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 12px;
+    }
+
+    .bio {
+      font-family: var(--font-sans);
+      font-size: 14.5px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.75;
+    }
+
+    .bio a {
+      color: var(--black);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .bio a:hover {
+      color: var(--accent);
+    }
+
+    /* ── SECTION TABS ── */
+    .section-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 56px;
+    }
+
+    .section-tabs a {
+      display: inline-block;
+      padding: 10px 0;
+      margin-right: 28px;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--mid);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      border-bottom: 1.5px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .section-tabs a:hover {
+      color: var(--black);
+      border-bottom-color: var(--black);
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 36px;
+      color: var(--black);
+    }
+
+    /* ── YEAR GROUPS ── */
+    .year-group {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 0 16px;
+      margin-bottom: 20px;
+      align-items: start;
+    }
+
+    .year {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--light);
+      padding-top: 1px;
+      letter-spacing: 0.02em;
+    }
+
+    .entries {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.75;
+    }
+
+    .entries a {
+      color: var(--black);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .entries a:hover {
+      color: var(--accent);
+    }
+
+    /* ── BIBLIOGRAPHY ── */
+    .bib-entry {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 0 16px;
+      margin-bottom: 20px;
+      align-items: start;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 24px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--light);
+      font-weight: 300;
+    }
+
+    footer a {
+      color: var(--light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--mid);
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      nav {
+        padding: 0 18px;
+      }
+
+      .nav-logo {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .nav-right {
+        gap: 18px;
+      }
+
+      main {
+        padding: 40px 18px 80px;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .year-group,
+      .bib-entry {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .year {
+        font-size: 12px;
+      }
+
+      footer {
+        padding: 20px 18px;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+    }
+    /* ── CV DOWNLOAD ── */
+    .cv-download {
+      border-top: 1px solid var(--rule);
+      padding-top: 32px;
+      margin-top: 16px;
+    }
+
+    .cv-label {
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 10px;
+    }
+
+    .cv-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+
+    .cv-desc a, .cv-link {
+      color: var(--black);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .cv-desc a:hover, .cv-link:hover { color: var(--accent); }
+
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13.5px;
+      font-weight: 400;
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .cv-link::after { content: '↓'; }
+    .cv-link:hover { border-bottom-color: var(--black); }
+
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Brian Bixby</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="info.html" class="active">Info</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main>
+
+    <!-- Artist Statement -->
+    <div class="statement-block">
+      <div class="statement-label">Statement</div>
+      <p class="statement-text">My work moves between image, object, installation, and moving media. I am interested in how perception is shaped by technology, memory, architecture, and the emotional residue carried by places and materials. Across different forms, the work often explores moments where the physical world feels unstable, mediated, or psychologically charged. Rather than treating photography, installation, painting, and digital processes as separate categories, I use each medium as a way of testing how images are constructed, how environments are felt, and how meaning shifts when the familiar becomes uncertain.</p>
+    </div>
+
+    <!-- Bio -->
+    <div class="bio-block">
+      <div class="bio-label">Biography</div>
+      <p class="bio">
+        Brian Bixby is an artist, curator, and co-founder of Bauhaus NEXT100. His work spans photography, installation, painting, video, and constructed objects, with an ongoing interest in perception, mediation, memory, and the shifting relationship between physical and digital space. He studied Media Art and Design at Bauhaus University in Weimar, Germany, and has exhibited in the United States and Europe.
+      </p>
+    </div>
+
+    <!-- Section Tabs -->
+    <div class="section-tabs">
+      <a href="#exhibitions">Exhibitions</a>
+      <a href="#performances">Performances and Screenings</a>
+      <a href="#bibliography">Bibliography</a>
+      <a href="#curation">Curation</a>
+    </div>
+
+    <!-- ── SELECTED EXHIBITIONS ── -->
+    <section class="section" id="exhibitions">
+      <h2 class="section-title">Selected Exhibitions</h2>
+
+      <div class="year-group">
+        <span class="year">2023</span>
+        <div class="entries">
+          NFTParis, NFTFactory, Paris, France<br>
+          Post Physical Playgrounds II, Bauhaus University, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2022</span>
+        <div class="entries">
+          Post Physical Playgrounds, Bauhaus University, Weimar, Germany (<a href="http://tinyurl.com/postphysicalplaygrounds" target="_blank" rel="noopener">Spatial.io Gallery</a>)
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2021</span>
+        <div class="entries">
+          The Sum, Bauhaus University, Weimar, Germany<br>
+          Ausstellungen, Gießen, Germany<br>
+          Anywhere But Here, SlowBurn Gallery, New York, USA
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2020</span>
+        <div class="entries">
+          Araki im Erotik Fachgeschäft, Jena, Germany<br>
+          Blu System, Geschwister-Scholl-Straße 8, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2019</span>
+        <div class="entries">
+          Coming Home, Bauhausstraße 1, Weimar, Germany<br>
+          Recapitulatio, Steubenstraße 8, Weimar, Germany<br>
+          Republik der Geister, Main Building of the Bauhaus University, Geschwister-Scholl-Straße 8, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2018</span>
+        <div class="entries">
+          Brüche der Wahrnehmung, Van-de-Velde-Bau, Geschwister-Scholl-Straße 7, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2017</span>
+        <div class="entries">
+          Der Neue Mensch, Die Neue Welt, Bauhaus Eins, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2015</span>
+        <div class="entries">
+          14 Bastard Flags, Nachtiville, Zeewolde, Netherlands<br>
+          She is no longer present, Curated by Duygu Atceken, Iconotope Gallery, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2014</span>
+        <div class="entries">
+          Illuminate the Darkness, Viehauktionshalle, Marcel-Paul-Straße 57, Weimar, Germany<br>
+          Zauberlehrling, Iconotope Gallery, Herderplatz 12, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2013</span>
+        <div class="entries">
+          Summaery, Bauhaus University, Weimar, Germany<br>
+          Some Rooms of Fortune, Bauhaus University, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2012</span>
+        <div class="entries">
+          Adieu Marie, Marienstraße 2, Weimar, Germany<br>
+          Twice Upon A Time, Stattberlin, Berlin, Germany<br>
+          Walter Benjamin in the Mall of America, KW Institute for Contemporary Art, Berlin, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2011</span>
+        <div class="entries">
+          Phantasmagoria, kaleidoskop Art Space, Berlin, Germany<br>
+          Currents, Santa Fe International New Media Festival, Santa Fe, New Mexico, USA<br>
+          Edition N1. Wonderland, Curated by Chun-Chi Wang, GlogauAir, Berlin, Germany<br>
+          I'm Looking For You, Weekendhaus, Berlin, Germany<br>
+          Wave Mechanics, Curated by James Coker, Albuquerque, New Mexico, USA
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2009</span>
+        <div class="entries">
+          Pherepaphe: the fourfold roots of everything, Curated by Phoenix Perry, Brooklyn, New York, USA<br>
+          Wonderland, Curated by Lance Fung, San Francisco, California, USA<br>
+          Noise, PennBrick Gallery, Santa Fe, New Mexico, USA<br>
+          Scores, Lawrimore Project, Seattle, Washington, USA
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2008</span>
+        <div class="entries">
+          Gradient Ghosts, ART Santa Fe, Santa Fe, New Mexico, USA<br>
+          Claiming Space, Curated by Kate Bonansinga and Mónica Ramírez-Montagut, Stanlee and Gerald Rubin Center for the Visual Arts at the University of Texas at El Paso (UTEP), El Paso, Texas
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2007</span>
+        <div class="entries">
+          Loosely Joined, 516 Arts, Albuquerque, New Mexico
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2006</span>
+        <div class="entries">
+          Wrekage, Curated by Craig Anderson, Center for Contemporary Art, Santa Fe, New Mexico, USA<br>
+          Art and Infinity, Santa Fe Community College, Santa Fe, New Mexico
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2005</span>
+        <div class="entries">
+          mass [re]production, College of Santa Fe Fine Arts Gallery, Santa Fe, New Mexico<br>
+          Currents, Santa Fe International Art Fair, Santa Fe, New Mexico
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2004</span>
+        <div class="entries">
+          Digital Showcase 27, Austin Museum of Digital Art, Austin, Texas<br>
+          Tune((In)), Santa Fe Art Institute, Santa Fe, New Mexico<br>
+          The Domino Effect, Santa Fe Art Institute, Santa Fe, New Mexico
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2001</span>
+        <div class="entries">
+          Nine Directions in Art, La Universidad Autónoma de Chihuahua, Chihuahua, Mexico
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SELECTED PERFORMANCES & SCREENINGS ── -->
+    <section class="section" id="performances">
+      <h2 class="section-title">Selected Performances &amp; Screenings</h2>
+
+      <div class="year-group">
+        <span class="year">2014</span>
+        <div class="entries">
+          Live visuals for Stewart Walker concert, Volksbühne, Berlin, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2011</span>
+        <div class="entries">
+          Currents 2011, Santa Fe International New Media Festival, Santa Fe, New Mexico, USA
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2008</span>
+        <div class="entries">
+          Plateaux Festival, Centre of Contemporary Art Znaki Czasu, Toruń, Poland<br>
+          Festival of Animated Film, Stuttgart '08, Stuttgart, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2007</span>
+        <div class="entries">
+          Red Dot Art Fair, Miami, USA
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2006</span>
+        <div class="entries">
+          SonicActsXI – The Anthology of Computer Art, Amsterdam, Netherlands<br>
+          52nd International Short Film Festival, Oberhausen, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2005</span>
+        <div class="entries">
+          Cannes Film Festival / 44th International Critics' Week, Cannes, France<br>
+          The Connectors / International Media Festival, Bristol, United Kingdom<br>
+          Currents / Art Santa Fe, Santa Fe, New Mexico<br>
+          Five12 Winter Summit, Atlanta, Georgia
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2004</span>
+        <div class="entries">
+          Warning Signal, Center for Contemporary Art, Santa Fe, New Mexico, USA
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BIBLIOGRAPHY ── -->
+    <section class="section" id="bibliography">
+      <h2 class="section-title">Bibliography</h2>
+
+      <div class="bib-entry">
+        <span class="year">2017</span>
+        <div class="entries">
+          Der Neue Mensch, Die Neue Welt, Fung, Lance and Waffel, Claire, Weimar, Germany, Bauhaus Eins, May 5, 2017
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2009</span>
+        <div class="entries">
+          VIDOS, Michael Fakesch, Berlin, Germany, March 2009
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2008</span>
+        <div class="entries">
+          Claiming Space, El Paso, Texas, United States, Rubin Gallery Press, November 18, 2008<br>
+          El Paso Life Magazine, Salinas, Sandra, "Artistas que reclaman un espacio", 09.18.08, p.30<br>
+          El Paso Magazine, "Claiming Space", 09.15.08, p.87 illus<br>
+          Santa Fean, Sardy, Marin, "Shifting Perspectives", 06.08, p 76 illus<br>
+          Santa Fean, "Top Talent", 06.08, p 60<br>
+          Rupture, Design New Mexico, Santa Fe, New Mexico, United States, Feb. 2008
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2007</span>
+        <div class="entries">
+          Apple.com, Gutoff, Bija, "Apple Pro interview", 07.07
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2006</span>
+        <div class="entries">
+          Wrekage, San Francisco, United States, Microcinema International, December 8, 2006<br>
+          SonicActsXI — The Anthology of Computer Art, Amsterdam, Netherlands, 2006<br>
+          Santa Fean, Davis, Kathryn M., "Wrekage review", 11.06, p 47 illus<br>
+          R. Klanten, N. Bourquin, T. Geiger, Tres Logos, Berlin, Germany, Oct. 2006<br>
+          Santa Fe Reporter, Fischer, Zane, "There is no spoon", Sept 27–Oct 3, 2006, vol 33, issue 38, p 35 illus<br>
+          Pasa Tiempo, Weideman, Paul, "Ediface wreks", Sept 22–28, 2006, p 48–50 illus<br>
+          THE Magazine, "Wrekage preview", 08.06, vol XIV, number VI, p 42 illus<br>
+          TREND Magazine, Stegner, Lynn, "Creative Science", Summer 2006, vol 7 issue 1, p 55 illus
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2005</span>
+        <div class="entries">
+          Creative Loafing, Radford, Chad, "Devine Inspiration", Jan 6–12, 2005, vol 33 no 35, p 83
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2004</span>
+        <div class="entries">
+          Domino Effect, Maeda, John, <a href="/the-nature-of-technology-john-maeda-2004.pdf" target="_blank" rel="noopener">The Nature of Technology</a>, original essay, exhibition catalog.<br>
+          XLR8R Magazine, June/July 2004, issue 78<br>
+          The New York Times, Yablonsky, Linda, "A Biennial Checklist: Art, Drinks, Checkbook", 08.23.04, p 26 illus<br>
+          Isolated. Funkstörung. Triple Media, Die Gestalten Verlag (dgv), Berlin, Germany, Nov. 2004
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <span class="year">2003</span>
+        <div class="entries">
+          Pasa Tiempo, Prince, David, "Sonic Installations", Nov 21–27, 2003, p 19 illus
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CURATION ── -->
+    <section class="section" id="curation">
+      <h2 class="section-title">Curation</h2>
+
+      <div class="year-group">
+        <span class="year">2022</span>
+        <div class="entries">
+          Post Physical Playgrounds, Bauhaus University, Weimar, Germany (<a href="http://tinyurl.com/postphysicalplaygrounds" target="_blank" rel="noopener">Spatial.io Gallery</a>)
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2019</span>
+        <div class="entries">
+          Coming Home, Bauhaus Eins, Weimar, Germany<br>
+          NEXT100 presents Raster.Signale 2 (the official program for the opening of the new Bauhaus Museum), Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2018</span>
+        <div class="entries">
+          NEXT100 presents Raster.Signale 1, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2014</span>
+        <div class="entries">
+          Zauberlehrling, Iconotope Gallery, Herderplatz 12, Weimar, Germany
+        </div>
+      </div>
+
+      <div class="year-group">
+        <span class="year">2004</span>
+        <div class="entries">
+          The Domino Effect, Santa Fe Art Institute, Santa Fe, New Mexico
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Download -->
+    <div class="cv-download">
+      <div class="cv-label">Press &amp; CV</div>
+      <p class="cv-desc">For CV requests, press materials, or selected high-resolution images, please <a href="contact.html">get in touch</a>.</p>
+      <!--
+        When your CV PDF is ready, add it to the root of your site and replace the
+        paragraph above with a download link:
+        <a class="cv-link" href="bixby-cv.pdf" target="_blank" rel="noopener">Download CV / Press PDF</a>
+      -->
+    </div>
+
+  </main>
+
+  <footer>
+    <span>Artwork and Text Copyright Brian Bixby. All rights reserved 2026.</span>
+    <span>
+</span>
+  </footer>
+
+</body>
+</html>

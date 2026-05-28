@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Bixby — Shedding</title>
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <meta name="description" content="Shedding is a 2-channel video installation. The work is composed of two separate performances I staged and filmed in Berlin, Germany in 2011." />
+  <link rel="canonical" href="https://brianbixby.com/projects/shedding" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Brian Bixby" />
+  <meta property="og:title" content="Brian Bixby — Shedding" />
+  <meta property="og:description" content="Shedding is a 2-channel video installation. The work is composed of two separate performances I staged and filmed in Berlin, Germany in 2011." />
+  <meta property="og:url" content="https://brianbixby.com/projects/shedding" />
+  <meta property="og:image" content="https://brianbixby.com/images/shedding-1140-761-3J3A9179-e1699425718899.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brian Bixby — Shedding" />
+  <meta name="twitter:description" content="Shedding is a 2-channel video installation. The work is composed of two separate performances I staged and filmed in Berlin, Germany in 2011." />
+  <meta name="twitter:image" content="https://brianbixby.com/images/shedding-1140-761-3J3A9179-e1699425718899.jpg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111111; --mid: #555555; --light: #aaaaaa; --rule: #dddddd;
+      --bg: #ffffff; --accent: #03a9f4;
+      --font-serif: 'EB Garamond', Georgia, serif;
+      --font-sans: 'Outfit', Helvetica, sans-serif;
+      --max-w: 820px; --nav-h: 52px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--black); font-family: var(--font-sans);
+           font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--bg);
+          border-bottom: 1px solid var(--rule); height: var(--nav-h);
+          display: flex; align-items: center; justify-content: space-between; padding: 0 30px; }
+    .nav-logo { font-family: var(--font-sans); font-weight: 500; font-size: 17px;
+                letter-spacing: -0.01em; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-size: 13.5px; font-weight: 400; color: var(--mid);
+                   text-decoration: none; letter-spacing: 0.01em; transition: color 0.15s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-links a.active { font-weight: 500; }
+
+    /* BACK LINK */
+    .back-bar { max-width: var(--max-w); margin: 0 auto; padding: 24px 30px 0; }
+    .back-link { font-size: 13px; color: var(--mid); text-decoration: none;
+                 display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
+    .back-link:hover { color: var(--black); }
+    .back-link::before { content: '←'; font-size: 14px; }
+
+    /* MAIN */
+    main { max-width: var(--max-w); margin: 0 auto; padding: 36px 30px 100px; }
+
+    /* PROJECT TITLE */
+    .project-title { font-family: var(--font-serif); font-size: 38px; font-weight: 400;
+                     line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 36px; }
+
+    /* HERO */
+    .hero { width: 100%; background: #f0f0f0; margin-bottom: 10px; overflow: hidden; }
+    .hero img { width: 100%; display: block; }
+
+    /* CAPTION */
+    .caption { font-size: 12.5px; color: var(--mid); font-style: italic;
+               line-height: 1.5; margin-bottom: 40px; }
+
+    /* BODY TEXT */
+    .project-body { font-size: 14.5px; font-weight: 300; line-height: 1.8;
+                    color: var(--black); margin-bottom: 36px; }
+    .project-body p { margin-bottom: 16px; }
+    .project-body em { font-style: italic; }
+
+    /* SECTION LABEL */
+    .section-label { font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
+                     text-transform: uppercase; color: var(--light); margin-bottom: 14px; }
+
+    /* 2-COL IMAGE PAIR */
+    .image-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 48px 0 0; }
+    .image-pair img { width: 100%; display: block; }
+
+    /* FOOTNOTES */
+    .footnotes { border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 48px; }
+    .footnotes .section-label { margin-bottom: 16px; }
+    .footnote { font-size: 13px; color: var(--mid); line-height: 1.65; margin-bottom: 10px; }
+    .footnote em { font-style: italic; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--rule); max-width: var(--max-w); margin: 0 auto;
+             padding: 24px 30px; display: flex; justify-content: space-between;
+             align-items: center; font-size: 12px; color: var(--light); font-weight: 300; }
+    footer a { color: var(--light); text-decoration: none; }
+    footer a:hover { color: var(--mid); }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
+      .project-title { font-size: 28px; }
+      .image-pair { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 6px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">Brian Bixby</a>
+    <ul class="nav-links">
+      <li><a href="../projects.html" class="active">Projects</a></li>
+      <li><a href="../info.html">Info</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="back-bar">
+    <a href="../projects.html" class="back-link">All Projects</a>
+  </div>
+
+  <main>
+    <h1 class="project-title">Shedding</h1>
+
+    <div class="hero">
+      <img src="/.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=1027&q=78" srcset="/.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=480&q=78 480w, /.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=820&q=78 820w, /.netlify/images?url=/images/shedding-1140-761-3J3A9179-e1699425718899.jpg&w=1027&q=78 1027w" sizes="(max-width: 820px) 100vw, 820px" alt="Shedding — installation view" width="1027" height="761" fetchpriority="high" />
+    </div>
+    <p class="caption"><em>Shedding</em>, installation view, 2-channel video projection, Iconotop, Weimar, Germany, 2015.</p>
+
+    <div class="section-label">Project Overview</div>
+    <div class="project-body">
+      <p><em>Shedding</em> is a 2-channel video installation. The work is composed of two separate performances I staged and filmed in Berlin, Germany in 2011. The final installed work illuminates a singular hanging backlit screen. The installation has a meditative quality because of the warm tones and slow performances that have been digitally post-processed. The bodies are highlighted with warm orange and red tones and their movements shift slowly like sand in a mesmerizing fashion as the image of a man and a woman are projected simultaneously to create this abstracted androgynous landscape.</p>
+      <p>In the years preceding this I had begun to experiment with long durational video performances which I would then loop on multiple devices in order to create virtually infinite double-exposures. This video-based installation piece is the result of one of those tests. This is no longer a film in the sense of it having a beginning and end because the image never repeats. Because of the physical materials and random number generation, this video work must be seen in real physical space because anything else is simply a simulation. I have done the best I could to document the work with a photograph.</p>
+      <p>The title is in relation to the shedding of skin, which occurs regularly with snakes when old skin is outgrown. The staging and choreography of the performances mimic this analogy of the snake shedding its skin. This piece reflects on relationships and identity and the influence of large industrial cities that never sleep. When a person sets out with the intention to look for someone they may be able to find themselves in the process. On the path to find ourselves there are many questions. Not all of them can be answered.</p>
+    </div>
+
+    <div class="image-pair">
+      <img src="/.netlify/images?url=/images/J3A9173.jpg&w=800&q=78" srcset="/.netlify/images?url=/images/J3A9173.jpg&w=400&q=78 400w, /.netlify/images?url=/images/J3A9173.jpg&w=640&q=78 640w, /.netlify/images?url=/images/J3A9173.jpg&w=800&q=78 800w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Shedding — viewer silhouetted against projection" width="800" height="533" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/J3A9169.jpg&w=800&q=78" srcset="/.netlify/images?url=/images/J3A9169.jpg&w=400&q=78 400w, /.netlify/images?url=/images/J3A9169.jpg&w=640&q=78 640w, /.netlify/images?url=/images/J3A9169.jpg&w=800&q=78 800w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Shedding — projection in empty room" width="800" height="533" loading="lazy" decoding="async" />
+    </div>
+    <p class="caption" style="margin-top: 10px;"><em>Shedding</em>, installation views, 2-channel video projection, Iconotop, Weimar, Germany, 2015.</p>
+
+    <div class="footnotes">
+      <div class="section-label">Notes</div>
+      <p class="footnote">Related exhibitions: <em>I'm Looking For You</em>, curated by Chun-Chi Wang as part of her Weekendhaus series, Berlin, Germany, 2011. <em>She is no longer present</em>, curated by Duygu Atceken at Iconotope Gallery, Weimar, Germany, 2015.</p>
+    </div>
+  </main>
+
+  <footer>
+    <span>Artwork and Text Copyright Brian Bixby. All rights reserved 2026.</span>
+</footer>
+
+
+  <script>const PROJECT_SLUG = 'shedding';</script>
+  <script src="../project-relations.js"></script>
+</body>
+</html>
