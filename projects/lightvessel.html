@@ -89,6 +89,10 @@
     .gallery-caption { font-size: 11.5px; color: var(--mid); font-style: italic;
                        padding: 8px 4px 12px; line-height: 1.45; }
 
+    /* VIDEO LOOPS */
+    .video-frame { width: 100%; aspect-ratio: 1/1; background: #f0f0f0; overflow: hidden; }
+    .loop-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     /* BODY TEXT */
     .project-body { font-size: 14.5px; font-weight: 300; line-height: 1.8;
                     color: var(--black); margin-bottom: 36px; }
@@ -158,6 +162,31 @@
         <p>Each Lightvessel is presented as an animated 360-degree video of the sculpture. The owner of the NFT will receive the physical sculpture via postal mail. There will be 100 boxes created in the series.</p>
     </div>
 
+    <div class="section-label">360&deg; Video</div>
+    <div class="gallery">
+    <div class="gallery-item">
+      <div class="video-frame">
+        <video class="loop-video" width="960" height="960"
+               poster="/.netlify/images?url=/videos/lightvessel-001-poster.jpg&amp;w=960&amp;q=78"
+               data-src="/videos/lightvessel-001.mp4"
+               muted loop playsinline preload="none"
+               aria-label="Lightvessel, number 001, animated 360 degree loop"></video>
+      </div>
+      <div class="gallery-caption">Lightvessel, No. 001, animated 360&deg; loop.</div>
+    </div>
+    <div class="gallery-item">
+      <div class="video-frame">
+        <video class="loop-video" width="960" height="960"
+               poster="/.netlify/images?url=/videos/lightvessel-002-poster.jpg&amp;w=960&amp;q=78"
+               data-src="/videos/lightvessel-002.mp4"
+               muted loop playsinline preload="none"
+               aria-label="Lightvessel, number 002, animated 360 degree loop"></video>
+      </div>
+      <div class="gallery-caption">Lightvessel, No. 002, animated 360&deg; loop.</div>
+    </div>
+  </div>
+
+    <div class="section-label">Duratrans Prints</div>
     <div class="gallery">
     <div class="gallery-item">
       <img src="/.netlify/images?url=/images/363A0513-lightvesselduratrans2.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/363A0513-lightvesselduratrans2.jpg&w=400&q=78 400w, /.netlify/images?url=/images/363A0513-lightvesselduratrans2.jpg&w=640&q=78 640w, /.netlify/images?url=/images/363A0513-lightvesselduratrans2.jpg&w=900&q=78 900w, /.netlify/images?url=/images/363A0513-lightvesselduratrans2.jpg&w=1140&q=78 1140w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Lightvessel Duratrans print detail" width="1140" height="760" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
@@ -171,8 +200,6 @@
 
       <div class="footnotes">
     <div class="section-label">Notes</div>
-    <p class="footnote">The <em>Lightvessel</em> collection is exclusively available at <a href="https://knownorigin.io/collections/bixby/lightvessel" target="_blank" rel="noopener">KnownOrigin</a>.</p>
-<p class="footnote"><em>Lightvessel</em> is featured on the <a href="https://www.uni-weimar.de/de/universitaet/profil/experiment-bauhaus/projekt/lightvessel/" target="_blank" rel="noopener">EXPERIMENT.Bauhaus Project Showcase</a>.</p>
 <p class="footnote">Artist Spotlight Interview with <a href="https://knownorigin.io/journal/spotlight/bixby" target="_blank" rel="noopener">KnownOrigin</a>.</p>
   </div>
   </main>
@@ -180,6 +207,31 @@
   <footer>
     <span>Artwork and Text Copyright Brian Bixby. All rights reserved 2026.</span>
 </footer>
+
+  <script>
+    // Lazy-load and auto play/pause the Lightvessel 360deg loops as they
+    // enter/leave the viewport. Skips loading entirely if the visitor has
+    // requested reduced motion — the poster frame is shown instead.
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var videos = document.querySelectorAll('.loop-video');
+      if (reduceMotion || !videos.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var video = entry.target;
+          if (entry.isIntersecting) {
+            if (!video.src) video.src = video.dataset.src;
+            video.play().catch(function () {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { rootMargin: '200px 0px', threshold: 0.1 });
+
+      videos.forEach(function (v) { observer.observe(v); });
+    })();
+  </script>
 
   <script>const PROJECT_SLUG = 'lightvessel';</script>
   <script src="../project-relations.js"></script>
