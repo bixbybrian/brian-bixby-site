@@ -93,6 +93,29 @@
     .video-frame { width: 100%; aspect-ratio: 1/1; background: #f0f0f0; overflow: hidden; }
     .loop-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+    /* 360° VIEWER — single video on left, body text on right, paginated */
+    .lv360 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+             align-items: start; margin: 16px 0 0; }
+    .lv360-video { display: flex; flex-direction: column; }
+    .lv360-caption { font-size: 11.5px; color: var(--mid); font-style: italic;
+                     padding: 8px 4px 0; line-height: 1.45; }
+    .lv360-body p { font-size: 14.5px; font-weight: 300; line-height: 1.8;
+                    color: var(--black); margin-bottom: 16px; }
+    .lv360-body p:last-child { margin-bottom: 0; }
+    .lv360-body em { font-style: italic; }
+    .lv360-body strong { font-weight: 500; }
+    .lv360-nav { display: flex; justify-content: center; align-items: center;
+                 gap: 28px; margin: 28px 0 0; }
+    .lv360-nav button { background: none; border: none; cursor: pointer;
+                        font-family: inherit; font-size: 12px; color: var(--mid);
+                        padding: 6px 4px; transition: color 0.15s;
+                        letter-spacing: 0.02em; }
+    .lv360-nav button:hover:not(:disabled) { color: var(--black); }
+    .lv360-nav button:disabled { color: var(--light); cursor: default; }
+    .lv360-nav button:focus-visible { outline: 1px solid var(--mid); outline-offset: 2px; }
+    .lv360-counter { font-size: 11px; color: var(--light); letter-spacing: 0.1em;
+                     font-variant-numeric: tabular-nums; }
+
     /* BODY TEXT */
     .project-body { font-size: 14.5px; font-weight: 300; line-height: 1.8;
                     color: var(--black); margin-bottom: 36px; }
@@ -129,6 +152,8 @@
       nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
       .project-title { font-size: 28px; }
       .gallery { grid-template-columns: 1fr; }
+      .lv360 { grid-template-columns: 1fr; gap: 14px; }
+      .lv360-nav { gap: 20px; margin-top: 20px; }
       footer { flex-direction: column; gap: 6px; text-align: center; }
       .project-nav { padding-left: 18px; padding-right: 18px; }
       .project-nav-title { font-size: 17px; }
@@ -175,31 +200,29 @@
   </div>
 
     <div class="section-label">360&deg; Video</div>
-    <div class="gallery">
-    <div class="gallery-item">
-      <div class="video-frame">
-        <video class="loop-video" width="960" height="960"
-               poster="/.netlify/images?url=/videos/lightvessel-001-poster.jpg&amp;w=960&amp;q=78"
-               data-src="/videos/lightvessel-001.mp4"
-               muted loop playsinline preload="none"
-               aria-label="Lightvessel, number 001, animated 360 degree loop"></video>
+    <div class="lv360">
+      <div class="lv360-video">
+        <div class="video-frame">
+          <video class="loop-video" id="lv360-video" width="960" height="960"
+                 poster="/.netlify/images?url=/videos/lightvessel-001-poster.jpg&amp;w=960&amp;q=78"
+                 muted loop playsinline preload="none"
+                 aria-label="Lightvessel, number 001, animated 360 degree loop"></video>
+        </div>
+        <div class="lv360-caption" id="lv360-caption">Lightvessel, No. 001, animated 360&deg; loop.</div>
       </div>
-      <div class="gallery-caption">Lightvessel, No. 001, animated 360&deg; loop.</div>
-    </div>
-    <div class="gallery-item">
-      <div class="video-frame">
-        <video class="loop-video" width="960" height="960"
-               poster="/.netlify/images?url=/videos/lightvessel-002-poster.jpg&amp;w=960&amp;q=78"
-               data-src="/videos/lightvessel-002.mp4"
-               muted loop playsinline preload="none"
-               aria-label="Lightvessel, number 002, animated 360 degree loop"></video>
+      <div class="lv360-body" id="lv360-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
-      <div class="gallery-caption">Lightvessel, No. 002, animated 360&deg; loop.</div>
     </div>
-  </div>
+    <nav class="lv360-nav" aria-label="360 degree video navigation">
+      <button class="lv360-prev" type="button" aria-label="Previous Lightvessel video">&larr; Previous</button>
+      <span class="lv360-counter" id="lv360-counter">01 / 02</span>
+      <button class="lv360-next" type="button" aria-label="Next Lightvessel video">Next &rarr;</button>
+    </nav>
 
       <div class="footnotes">
     <div class="section-label">Notes</div>
+<p class="footnote"><em>Lightvessel</em> was featured on the EXPERIMENT.Bauhaus Project Showcase of the Bauhaus University in 2021.</p>
 <p class="footnote">Artist Spotlight Interview with <a href="https://knownorigin.io/journal/spotlight/bixby" target="_blank" rel="noopener">KnownOrigin</a>.</p>
   </div>
   </main>
@@ -209,27 +232,82 @@
 </footer>
 
   <script>
-    // Lazy-load and auto play/pause the Lightvessel 360deg loops as they
-    // enter/leave the viewport. Skips loading entirely if the visitor has
-    // requested reduced motion — the poster frame is shown instead.
+    // Lightvessel 360° viewer: one video at a time with prev/next swap.
+    // Lazy-loads the active video and play/pauses on viewport visibility.
+    // Skips video loading entirely under prefers-reduced-motion (poster only).
     (function () {
+      var slides = [
+        {
+          poster:  '/.netlify/images?url=/videos/lightvessel-001-poster.jpg&w=960&q=78',
+          src:     '/videos/lightvessel-001.mp4',
+          label:   'Lightvessel, number 001, animated 360 degree loop',
+          caption: 'Lightvessel, No. 001, animated 360° loop.',
+          body:    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>'
+        },
+        {
+          poster:  '/.netlify/images?url=/videos/lightvessel-002-poster.jpg&w=960&q=78',
+          src:     '/videos/lightvessel-002.mp4',
+          label:   'Lightvessel, number 002, animated 360 degree loop',
+          caption: 'Lightvessel, No. 002, animated 360° loop.',
+          body:    '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>'
+        }
+      ];
+
       var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var videos = document.querySelectorAll('.loop-video');
-      if (reduceMotion || !videos.length) return;
+      var video    = document.getElementById('lv360-video');
+      var caption  = document.getElementById('lv360-caption');
+      var body     = document.getElementById('lv360-body');
+      var counter  = document.getElementById('lv360-counter');
+      var prevBtn  = document.querySelector('.lv360-prev');
+      var nextBtn  = document.querySelector('.lv360-next');
+      if (!video || !slides.length) return;
 
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          var video = entry.target;
-          if (entry.isIntersecting) {
-            if (!video.src) video.src = video.dataset.src;
-            video.play().catch(function () {});
-          } else {
-            video.pause();
-          }
-        });
-      }, { rootMargin: '200px 0px', threshold: 0.1 });
+      var current = 0;
+      var inViewport = false;
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
-      videos.forEach(function (v) { observer.observe(v); });
+      function render(idx) {
+        var s = slides[idx];
+        video.pause();
+        video.poster = s.poster;
+        video.setAttribute('aria-label', s.label);
+        caption.textContent = s.caption;
+        body.innerHTML = s.body;
+        counter.textContent = pad(idx + 1) + ' / ' + pad(slides.length);
+        prevBtn.disabled = idx === 0;
+        nextBtn.disabled = idx === slides.length - 1;
+        if (!reduceMotion && inViewport) {
+          video.src = s.src;
+          video.play().catch(function () {});
+        } else if (video.src) {
+          video.removeAttribute('src');
+          try { video.load(); } catch (e) {}
+        }
+      }
+
+      prevBtn.addEventListener('click', function () {
+        if (current > 0) { current--; render(current); }
+      });
+      nextBtn.addEventListener('click', function () {
+        if (current < slides.length - 1) { current++; render(current); }
+      });
+
+      render(0);
+
+      if (!reduceMotion) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            inViewport = entry.isIntersecting;
+            if (entry.isIntersecting) {
+              if (!video.src) video.src = slides[current].src;
+              video.play().catch(function () {});
+            } else {
+              video.pause();
+            }
+          });
+        }, { rootMargin: '200px 0px', threshold: 0.1 });
+        observer.observe(video);
+      }
     })();
   </script>
 
