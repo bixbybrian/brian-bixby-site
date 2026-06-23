@@ -63,16 +63,6 @@
     .project-title { font-family: var(--font-serif); font-size: 38px; font-weight: 400;
                      line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 36px; }
 
-    /* METADATA BLOCK — tombstone data below hero caption */
-    .project-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-                    gap: 18px 32px; padding-top: 20px; margin: 0 0 44px;
-                    border-top: 1px solid var(--rule); }
-    .project-meta > div { min-width: 0; }
-    .project-meta dt { font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
-                       text-transform: uppercase; color: var(--light); margin-bottom: 5px; }
-    .project-meta dd { font-size: 13.5px; color: var(--black); line-height: 1.5;
-                       font-weight: 300; }
-
     /* HERO IMAGE — aspect ratio driven by the image file itself */
     .hero-placeholder { width: 100%; margin-bottom: 10px; }
     .hero-placeholder img { width: 100%; height: auto; display: block; }
@@ -126,7 +116,6 @@
     @media (max-width: 600px) {
       nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
       .project-title { font-size: 28px; }
-      .project-meta { grid-template-columns: 1fr; gap: 14px 0; }
       .gallery { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 6px; text-align: center; }
     }
@@ -151,13 +140,7 @@
     <h1 class="project-title">Witness</h1>
 
     <div class="hero-placeholder"><img src="/.netlify/images?url=/images/witness-1.jpg&w=960&q=78" srcset="/.netlify/images?url=/images/witness-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/witness-1.jpg&w=960&q=78 960w, /.netlify/images?url=/images/witness-1.jpg&w=1280&q=78 1280w" sizes="(min-width: 820px) 760px, 100vw" alt="Witness" width="1280" height="905" fetchpriority="high" /></div>
-    <p class="caption"><em>Witness</em>, installation view, Viehauktionshalle, Marcel-Paul-Str. 57, Weimar, Germany. Materials: peep-hole, wood window frames, black and white Xerox prints, cardboard, tape, glue, fluorescent paint.</p>
-
-    <dl class="project-meta">
-      <div><dt>Year</dt><dd>2014</dd></div>
-      <div><dt>Format</dt><dd>Site-specific installation</dd></div>
-      <div><dt>Location</dt><dd>Viehauktionshalle, Weimar, Germany</dd></div>
-    </dl>
+    <p class="caption"><em>Witness</em>, installation view, Viehauktionshalle, Marcel-Paul-Str. 57, Weimar, Germany. Materials: peep-hole, wood window frames, black and white Xerox prints, cardboard, tape, glue, fluorescent paint, 2014.</p>
 
     <div class="section-label">Project Overview</div>
     <div class="project-body">
