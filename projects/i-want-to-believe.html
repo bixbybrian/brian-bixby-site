@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brian Bixby — I Want To Believe</title>
+  <title>Brian Bixby: I Want To Believe</title>
   <link rel="stylesheet" href="/fonts/fonts.css" />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -15,14 +15,14 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Brian Bixby" />
-  <meta property="og:title" content="Brian Bixby — I Want To Believe" />
+  <meta property="og:title" content="Brian Bixby: I Want To Believe" />
   <meta property="og:description" content="In the 90's the phrase &quot;I want to believe&quot; had become synonymous with science fiction and belief in extraterrestrial life." />
   <meta property="og:url" content="https://brianbixby.com/projects/i-want-to-believe" />
-  <meta property="og:image" content="https://brianbixby.com/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg" />
+  <meta property="og:image" content="https://brianbixby.com/images/iwanttobelieve-installview-1.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Brian Bixby — I Want To Believe" />
+  <meta name="twitter:title" content="Brian Bixby: I Want To Believe" />
   <meta name="twitter:description" content="In the 90's the phrase &quot;I want to believe&quot; had become synonymous with science fiction and belief in extraterrestrial life." />
-  <meta name="twitter:image" content="https://brianbixby.com/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg" />
+  <meta name="twitter:image" content="https://brianbixby.com/images/iwanttobelieve-installview-1.jpg" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     img { height: auto; }
@@ -71,6 +71,15 @@
     .caption { font-size: 12.5px; color: var(--mid); font-style: italic;
                line-height: 1.5; margin-bottom: 40px; }
 
+    /* IMAGE BLOCK: full-width stacked image with caption */
+    .image-block { width: 100%; margin: 0 0 10px; }
+    .image-block img { width: 100%; height: auto; display: block; }
+
+    /* THUMB GRID: 4-up at desktop, 2-up at mobile */
+    .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr);
+                      gap: 4px; margin: 0 0 24px; }
+    .gallery-thumbs img { width: 100%; height: auto; display: block; }
+
     /* BODY TEXT */
     .project-body { font-size: 14.5px; font-weight: 300; line-height: 1.8;
                     color: var(--black); margin-bottom: 36px; }
@@ -98,6 +107,7 @@
     @media (max-width: 600px) {
       nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
       .project-title { font-size: 28px; }
+      .gallery-thumbs { grid-template-columns: repeat(2, 1fr); }
       footer { flex-direction: column; gap: 6px; text-align: center; }
     }
   </style>
@@ -121,15 +131,34 @@
     <h1 class="project-title">I Want To Believe</h1>
 
     <div class="hero">
-      <img src="/.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=439&q=78" srcset="/.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=439&q=78 439w" sizes="(max-width: 820px) 100vw, 820px" alt="I Want To Believe — installation view" width="439" height="650" fetchpriority="high" />
+      <img src="/.netlify/images?url=/images/iwanttobelieve-installview-1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/iwanttobelieve-installview-1.jpg&w=480&q=78 480w, /.netlify/images?url=/images/iwanttobelieve-installview-1.jpg&w=820&q=78 820w, /.netlify/images?url=/images/iwanttobelieve-installview-1.jpg&w=1140&q=78 1140w" sizes="(max-width: 820px) 100vw, 820px" alt="I Want To Believe: installation view" width="1280" height="650" fetchpriority="high" />
     </div>
-    <p class="caption"><em>I Want To Believe</em>, installation view, Xerox prints, 3 LED light boxes and Duratrans prints, wood frame: 131.5 × 216.5 cm.</p>
+    <p class="caption"><em>I Want To Believe</em>, installation view.</p>
+
+    <div class="image-block">
+      <img src="/.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=820&q=78" srcset="/.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=400&q=78 400w, /.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=640&q=78 640w, /.netlify/images?url=/images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg&w=820&q=78 820w" sizes="(max-width: 820px) 100vw, 820px" alt="I Want To Believe: artwork, lights on" width="439" height="650" loading="lazy" decoding="async" />
+    </div>
+    <p class="caption"><em>I Want To Believe</em>, lights on. Xerox prints, 3 LED light boxes and Duratrans prints, wood frame: 131.5 × 216.5 cm.</p>
+
+    <div class="image-block">
+      <img src="/.netlify/images?url=/images/bixby-iwtb-b.jpg&w=820&q=78" srcset="/.netlify/images?url=/images/bixby-iwtb-b.jpg&w=400&q=78 400w, /.netlify/images?url=/images/bixby-iwtb-b.jpg&w=640&q=78 640w, /.netlify/images?url=/images/bixby-iwtb-b.jpg&w=820&q=78 820w" sizes="(max-width: 820px) 100vw, 820px" alt="I Want To Believe: artwork, lights off" width="720" height="1080" loading="lazy" decoding="async" />
+    </div>
+    <p class="caption"><em>I Want To Believe</em>, lights off.</p>
 
     <div class="section-label">Project Overview</div>
     <div class="project-body">
       <p>In the 90's the phrase "I want to believe" had become synonymous with science fiction and belief in extraterrestrial life.</p>
-      <p>In the image a woman is looking upward and she is bathed in light. Because of the layering effect we see three hands in the position of a triangle. Her right wrist is tattooed with a musical note and she clutches a bouquet of dried flowers. In her left hand she holds an apple from its stem by her fingertips. An alien head is tattooed on her right leg. The image is composed of two photographs — a black and white layer (74 Xerox photocopies) and a color layer (3 LED lightboxes). The black and white image is applied directly on the wall like wallpaper and the color lightboxes are hung on top of the wallpaper.</p>
+      <p>In the image a woman is looking upward and she is bathed in light. Because of the layering effect we see three hands in the position of a triangle. Her right wrist is tattooed with a musical note and she clutches a bouquet of dried flowers. In her left hand she holds an apple from its stem by her fingertips. An alien head is tattooed on her right leg. The image is composed of two photographs: a black and white layer (74 Xerox photocopies) and a color layer (3 LED lightboxes). The black and white image is applied directly on the wall like wallpaper and the color lightboxes are hung on top of the wallpaper.</p>
       <p>This photo was taken at Marienstraße 9 in the vacant apartment of Frau Müller who recently passed away. There are traces of her in the apartment including old letters and a walking cane. The rose patterned GDR era wallpaper was charming and I wanted to transport this to another place and preserve it. I was fascinated by the idea of using her wallpaper to create a new wallpaper. I hope to preserve some essence of this apartment which will eventually be renovated and lost.</p>
+    </div>
+
+    <div class="section-label">Installation Process</div>
+    <div class="gallery-thumbs">
+      <img src="/.netlify/images?url=/images/WP_20170503_23_33_38_Rich.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/WP_20170503_23_33_38_Rich.jpg&w=200&q=78 200w, /.netlify/images?url=/images/WP_20170503_23_33_38_Rich.jpg&w=400&q=78 400w, /.netlify/images?url=/images/WP_20170503_23_33_38_Rich.jpg&w=600&q=78 600w" sizes="(max-width: 600px) 50vw, 205px" alt="I Want To Believe: installation in progress" width="720" height="1080" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/WP_20170503_23_38_47_Rich.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/WP_20170503_23_38_47_Rich.jpg&w=200&q=78 200w, /.netlify/images?url=/images/WP_20170503_23_38_47_Rich.jpg&w=400&q=78 400w, /.netlify/images?url=/images/WP_20170503_23_38_47_Rich.jpg&w=600&q=78 600w" sizes="(max-width: 600px) 50vw, 205px" alt="I Want To Believe: installation in progress" width="720" height="1080" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/WP_20170503_23_39_27_Rich.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/WP_20170503_23_39_27_Rich.jpg&w=200&q=78 200w, /.netlify/images?url=/images/WP_20170503_23_39_27_Rich.jpg&w=400&q=78 400w, /.netlify/images?url=/images/WP_20170503_23_39_27_Rich.jpg&w=600&q=78 600w" sizes="(max-width: 600px) 50vw, 205px" alt="I Want To Believe: installation in progress" width="720" height="1080" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/WP_20170504_01_01_45_Rich.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/WP_20170504_01_01_45_Rich.jpg&w=200&q=78 200w, /.netlify/images?url=/images/WP_20170504_01_01_45_Rich.jpg&w=400&q=78 400w, /.netlify/images?url=/images/WP_20170504_01_01_45_Rich.jpg&w=600&q=78 600w" sizes="(max-width: 600px) 50vw, 205px" alt="I Want To Believe: installation in progress" width="720" height="1080" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/WP_20170504_16_07_12_Rich.jpg&w=400&q=78" srcset="/.netlify/images?url=/images/WP_20170504_16_07_12_Rich.jpg&w=200&q=78 200w, /.netlify/images?url=/images/WP_20170504_16_07_12_Rich.jpg&w=400&q=78 400w, /.netlify/images?url=/images/WP_20170504_16_07_12_Rich.jpg&w=600&q=78 600w" sizes="(max-width: 600px) 50vw, 205px" alt="I Want To Believe: installation in progress" width="720" height="1080" loading="lazy" decoding="async" />
     </div>
 
     <div class="footnotes">
