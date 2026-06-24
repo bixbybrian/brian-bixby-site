@@ -91,6 +91,11 @@
     .portrait-item img { width: 100%; display: block; }
     .portrait-item .caption { margin-top: 10px; margin-bottom: 0; }
 
+    /* INSTALL-VIEW GRID — auto-fill, mixed portrait/landscape */
+    .install-view { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                    gap: 4px; margin: 48px 0 0; }
+    .install-view img { width: 100%; height: auto; display: block; }
+
     /* FOOTNOTES */
     .footnotes { border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 48px; }
     .footnotes .section-label { margin-bottom: 16px; }
@@ -110,6 +115,7 @@
       nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
       .project-title { font-size: 28px; }
       .portrait-pair { grid-template-columns: 1fr; }
+      .install-view { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 6px; text-align: center; }
     }
   </style>
@@ -139,7 +145,8 @@
 
     <div class="section-label">Project Overview</div>
     <div class="project-body">
-      <p>Photographs of flowers purchased in a Berlin flower shop. The photographs were further manipulated digitally in post production to add an alien or mutation element to the composition. They are no longer standard still life portraits of flowers, although from a distance this is exactly how they would appear at first glance.</p>
+      <p><em>Inflorescence</em> is a series of photographs that takes the flower still life, one of the oldest and most familiar subjects in art, and quietly turns it into something else. The flowers were purchased in a Berlin flower shop and photographed as ordinary still lifes. In post production they were manipulated digitally, their colors pushed and their forms drawn out, and seeded with disparate material, fragments of pornography and fashion advertising, until an alien or mutated element had entered each composition.</p>
+      <p>From a distance every picture still reads as a portrait of a flower. Up close it has become something stranger. What we see is not always what we imagine it to be, and this is especially true in an era of digital media, where history can be re-written and re-created and the truth is no longer an absolute. The beauty survives the manipulation. What changes is whether we can trust it.</p>
       <blockquote>
         "Built on the refinement of vision, ultra-contemporary in tone and beautiful from the standpoint of being 'stretched representations' of well-known flowers, with 'pushed' colors and drifting forms thrusting them into another realm; botanical but ethereal."
         <cite>— Craig Anderson, Curator and former Assistant Director for Exhibitions and Collections, Miami Art Museum.</cite>
@@ -155,6 +162,30 @@
         <img src="/.netlify/images?url=/images/ITDP-Inflorescence-01.jpg&w=853&q=78" srcset="/.netlify/images?url=/images/ITDP-Inflorescence-01.jpg&w=400&q=78 400w, /.netlify/images?url=/images/ITDP-Inflorescence-01.jpg&w=640&q=78 640w, /.netlify/images?url=/images/ITDP-Inflorescence-01.jpg&w=853&q=78 853w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Inflorescence (Nerine Sarniensis)" width="853" height="1280" loading="lazy" decoding="async" />
         <p class="caption"><em>Inflorescence (Nerine Sarniensis)</em>, 2012.</p>
       </div>
+      <div class="portrait-item">
+        <img src="/.netlify/images?url=/images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg&w=505&q=78" srcset="/.netlify/images?url=/images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg&w=400&q=78 400w, /.netlify/images?url=/images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg&w=505&q=78 505w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Inflorescence (Gerbera)" width="505" height="761" loading="lazy" decoding="async" />
+        <p class="caption"><em>Inflorescence (Gerbera)</em>, digital, 6000 &times; 9000 pixels.</p>
+      </div>
+      <div class="portrait-item">
+        <img src="/.netlify/images?url=/images/ITDP-Amaryllis-01-1.jpg&w=853&q=78" srcset="/.netlify/images?url=/images/ITDP-Amaryllis-01-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/ITDP-Amaryllis-01-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/ITDP-Amaryllis-01-1.jpg&w=853&q=78 853w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Inflorescence (Amaryllis)" width="853" height="1280" loading="lazy" decoding="async" />
+        <p class="caption"><em>Inflorescence (Amaryllis)</em>, digital, 6000 &times; 9000 pixels.</p>
+      </div>
+      <div class="portrait-item">
+        <img src="/.netlify/images?url=/images/ITDP-Nerine-01.jpg&w=853&q=78" srcset="/.netlify/images?url=/images/ITDP-Nerine-01.jpg&w=400&q=78 400w, /.netlify/images?url=/images/ITDP-Nerine-01.jpg&w=640&q=78 640w, /.netlify/images?url=/images/ITDP-Nerine-01.jpg&w=853&q=78 853w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 1100px" alt="Inflorescence (Nerine)" width="853" height="1280" loading="lazy" decoding="async" />
+        <p class="caption"><em>Inflorescence (Nerine)</em>, digital, 6000 &times; 9000 pixels.</p>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:48px;">Installation View</div>
+    <div class="install-view">
+      <img src="/.netlify/images?url=/images/IMG_0886-1.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_0886-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_0886-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_0886-1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_0886-1.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (1)" width="1280" height="960" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/IMG_0901-1.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_0901-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_0901-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_0901-1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_0901-1.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (2)" width="1280" height="960" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/IMG_4028_16bit_final_flat-3_V2_printed.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_4028_16bit_final_flat-3_V2_printed.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_4028_16bit_final_flat-3_V2_printed.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_4028_16bit_final_flat-3_V2_printed.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_4028_16bit_final_flat-3_V2_printed.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (3)" width="853" height="1280" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/IMG_4253_16bit_final_flat-4_V1_printed.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_4253_16bit_final_flat-4_V1_printed.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_4253_16bit_final_flat-4_V1_printed.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_4253_16bit_final_flat-4_V1_printed.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_4253_16bit_final_flat-4_V1_printed.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (4)" width="853" height="1280" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/IMG_6135-1.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_6135-1.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_6135-1.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_6135-1.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_6135-1.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (5)" width="1280" height="853" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/IMG_6178-3.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_6178-3.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_6178-3.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_6178-3.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_6178-3.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (6)" width="853" height="1280" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/IMG_6179-4.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/IMG_6179-4.jpg&w=400&q=78 400w, /.netlify/images?url=/images/IMG_6179-4.jpg&w=640&q=78 640w, /.netlify/images?url=/images/IMG_6179-4.jpg&w=900&q=78 900w, /.netlify/images?url=/images/IMG_6179-4.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (7)" width="853" height="1280" loading="lazy" decoding="async" />
+      <img src="/.netlify/images?url=/images/itdp_framed2.jpg&w=1280&q=78" srcset="/.netlify/images?url=/images/itdp_framed2.jpg&w=400&q=78 400w, /.netlify/images?url=/images/itdp_framed2.jpg&w=640&q=78 640w, /.netlify/images?url=/images/itdp_framed2.jpg&w=900&q=78 900w, /.netlify/images?url=/images/itdp_framed2.jpg&w=1280&q=78 1280w" sizes="(max-width: 600px) 100vw, (max-width: 1100px) 33vw, 270px" alt="Inflorescence: installation view (8)" width="1280" height="913" loading="lazy" decoding="async" />
     </div>
 
   </main>

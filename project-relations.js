@@ -142,13 +142,6 @@ const PROJECTS = {
     image: '../images/infloresence-1140-761-IMG_6172-28.jpg',
     url: 'inflorescence.html'
   },
-  'in-the-darkest-places': {
-    title: 'In The Darkest Places',
-    year: '2012',
-    medium: 'Photography',
-    image: '../images/in-the-darkest-places-IMG_4360-1140-761-e1699425660547.jpg',
-    url: 'in-the-darkest-places.html'
-  },
   'shedding': {
     title: 'Shedding',
     year: '2011',
@@ -193,7 +186,7 @@ const PROJECTS = {
 const RELATIONS = {
   'lightvessel':           ['inflorescence', 'forbidden-colours', 'apparition'],
   'unseen-unfelt':         ['the-lion', 'dream-therapy', 'forbidden-colours'],
-  'forbidden-colours':     ['inflorescence', 'in-the-darkest-places', 'lightvessel'],
+  'forbidden-colours':     ['inflorescence', 'unseen-unfelt', 'lightvessel'],
   'apparition':            ['portal', 'witness', 'archaeology-excavation-and-what-remains'],
   'glyph':                 ['dream-therapy', 'aldi', 'mechanical-postcard'],
   'aldi':                  ['glyph', 'walter-benjamin-in-the-mall-of-america', 'mechanical-postcard'],
@@ -205,12 +198,11 @@ const RELATIONS = {
   'mechanical-postcard':   ['walter-benjamin-in-the-mall-of-america', 'apperception', 'aldi'],
   'the-lion':              ['witness', 'dream-therapy', 'glyph'],
   'wolf-man-in-forest':    ['ruminants', 'autumn-fires', 'shedding'],
-  'ruminants':             ['wolf-man-in-forest', 'in-the-darkest-places', 'i-want-to-believe'],
+  'ruminants':             ['wolf-man-in-forest', 'inflorescence', 'i-want-to-believe'],
   'schwarz-zimmer':        ['lustmord', 'portal', 'archaeology-excavation-and-what-remains'],
   'archaeology-excavation-and-what-remains': ['portal', 'apparition', 'schwarz-zimmer'],
   'lustmord':              ['schwarz-zimmer', 'witness', 'portal'],
-  'inflorescence':         ['forbidden-colours', 'in-the-darkest-places', 'lightvessel'],
-  'in-the-darkest-places': ['inflorescence', 'forbidden-colours', 'ruminants'],
+  'inflorescence':         ['forbidden-colours', 'unseen-unfelt', 'lightvessel'],
   'shedding':              ['memory-of-a-desert-journey', 'apperception', 'wolf-man-in-forest'],
   'walter-benjamin-in-the-mall-of-america': ['mechanical-postcard', 'aldi', 'apperception'],
   'memory-of-a-desert-journey': ['shedding', 'apperception', 'interference'],
@@ -225,7 +217,7 @@ const PROJECT_ORDER = [
   'witness', 'dream-therapy', 'mechanical-postcard', 'the-lion',
   'wolf-man-in-forest', 'ruminants', 'schwarz-zimmer',
   'archaeology-excavation-and-what-remains', 'lustmord',
-  'inflorescence', 'in-the-darkest-places', 'shedding',
+  'inflorescence', 'shedding',
   'walter-benjamin-in-the-mall-of-america', 'memory-of-a-desert-journey',
   'interference', 'apperception'
 ];
