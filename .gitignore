@@ -11,3 +11,12 @@ Thumbs.db
 
 # Claude Code local settings (personal, not part of the site)
 .claude/settings.local.json
+
+# Forbidden Colours full-resolution source exports (kept on disk for archive,
+# resized versions live in images/ as fc-blue-NN.jpg / fc-pink-NN.jpg)
+images/FC-Blue-JPEG-EXPORTS/
+images/FC-Pink-JPEG-EXPORTS/
+
+# Local-only archive of images removed from pages. Files stay on disk for
+# personal recovery but don't ride along in git or get deployed to Netlify.
+images/_archive/
