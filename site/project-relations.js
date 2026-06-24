@@ -13,21 +13,21 @@ const PROJECTS = {
     title: 'Lightvessel',
     year: '2021',
     medium: 'Sculpture',
-    image: '../images/363A0540-lightvessel-duratrans1.jpg',
+    image: '../images/lightvessel-hero-1.jpg',
     url: 'lightvessel.html'
   },
   'unseen-unfelt': {
     title: 'Unseen / Unfelt',
     year: '2020',
     medium: 'Photography',
-    image: '../images/ArakiimErotikfachgeschaeft_Ausstellung_12.jpg',
+    image: '../images/unseen-unfelt-hero-1.jpg',
     url: 'unseen-unfelt.html'
   },
   'forbidden-colours': {
     title: 'Forbidden Colours',
     year: '2019',
     medium: 'Photography',
-    image: '../images/forbidden_colours-blue-1140x761-1.jpg',
+    image: '../images/forbidden-colours-hero-1.jpg',
     url: 'forbidden-colours.html'
   },
   'apparition': {
@@ -41,28 +41,28 @@ const PROJECTS = {
     title: 'Glyph',
     year: '2018',
     medium: 'Photography',
-    image: '../images/Bixby-Glyph-01-HEADER.jpg',
+    image: '../images/glyph-hero-1.jpg',
     url: 'glyph.html'
   },
   'aldi': {
     title: 'ALDI Nord I',
     year: '2018',
     medium: 'Mixed Media',
-    image: '../images/aldi-nord-1140-761b-e1699424900379.jpg',
+    image: '../images/aldi-hero-1.jpg',
     url: 'aldi.html'
   },
   'autumn-fires': {
     title: 'Autumn Fires',
     year: '2018',
     medium: 'Painting',
-    image: '../images/Untitled-Blue-Painting-1140-761-1.jpg',
+    image: '../images/autumn-fires-hero-1.jpg',
     url: 'autumn-fires.html'
   },
   'portal': {
     title: 'Portal',
     year: '2017',
     medium: 'Installation',
-    image: '../images/portal-1140-761-IMG_9150b-e1699425136837.jpg',
+    image: '../images/portal-hero-1.jpg',
     url: 'portal.html'
   },
   'i-want-to-believe': {
@@ -83,98 +83,98 @@ const PROJECTS = {
     title: 'Dream Therapy',
     year: '2015',
     medium: 'Photography',
-    image: '../images/dream-therapy-3.jpg',
+    image: '../images/dream-therapy-hero-1.jpg',
     url: 'dream-therapy.html'
   },
   'mechanical-postcard': {
     title: 'Mechanical Postcard',
     year: '2014',
     medium: 'Mixed Media',
-    image: '../images/mechanical-postcard-1140-761-e1699425299142.jpg',
+    image: '../images/mechanical-postcard-hero-1.jpg',
     url: 'mechanical-postcard.html'
   },
   'the-lion': {
     title: 'The Lion',
     year: '2015',
     medium: 'Photography',
-    image: '../images/The-Lion-18-Series-Header-e1699425377820.jpg',
+    image: '../images/the-lion-hero-1.jpg',
     url: 'the-lion.html'
   },
   'wolf-man-in-forest': {
     title: 'Wolf Man In Forest',
     year: '2013',
     medium: 'Painting',
-    image: '../images/wolfman-in-forest-1140-761-e1699425448561.jpg',
+    image: '../images/wolf-man-in-forest-hero-1.jpg',
     url: 'wolf-man-in-forest.html'
   },
   'ruminants': {
     title: 'Ruminants',
     year: '2014',
     medium: 'Mixed Media',
-    image: '../images/Ruminants-Cover1-e1699425521337.jpg',
+    image: '../images/ruminants-hero-1.jpg',
     url: 'ruminants.html'
   },
   'schwarz-zimmer': {
     title: 'Schwarz Zimmer',
     year: '2013',
     medium: 'Installation',
-    image: '../images/schwartz-zimmer-1140-761-IMG_1953.jpg',
+    image: '../images/schwarz-zimmer-hero-1.jpg',
     url: 'schwarz-zimmer.html'
   },
   'archaeology-excavation-and-what-remains': {
     title: 'Archaeology, Excavation and What Remains',
     year: '2012',
     medium: 'Installation',
-    image: '../images/archaeology-1140-761-IMG_0994-e1699425585513.jpg',
+    image: '../images/archaeology-excavation-and-what-remains-hero-1.jpg',
     url: 'archaeology-excavation-and-what-remains.html'
   },
   'lustmord': {
     title: 'Lustmord',
     year: '2012',
     medium: 'Installation',
-    image: '../images/Archaeology-1140-761-P1160410.jpg',
+    image: '../images/lustmord-hero-1.jpg',
     url: 'lustmord.html'
   },
   'inflorescence': {
     title: 'Inflorescence',
     year: '2012',
     medium: 'Photography',
-    image: '../images/infloresence-1140-761-IMG_6172-28.jpg',
+    image: '../images/inflorescence-hero-1.jpg',
     url: 'inflorescence.html'
   },
   'shedding': {
     title: 'Shedding',
     year: '2011',
     medium: 'Video',
-    image: '../images/shedding-1140-761-3J3A9179-e1699425718899.jpg',
+    image: '../images/shedding-hero-1.jpg',
     url: 'shedding.html'
   },
   'walter-benjamin-in-the-mall-of-america': {
     title: 'Walter Benjamin in the Mall of America',
     year: '2012',
     medium: 'Mixed Media',
-    image: '../images/Mall-of-America-1140-761-IMG_7804.jpg',
+    image: '../images/walter-benjamin-in-the-mall-of-america-hero-1.jpg',
     url: 'walter-benjamin-in-the-mall-of-america.html'
   },
   'memory-of-a-desert-journey': {
     title: 'Memory of a Desert Journey',
     year: '2011',
     medium: 'Video',
-    image: '../images/desert-journey-1140-761-IMG_5211.jpg',
+    image: '../images/memory-of-a-desert-journey-hero-1.jpg',
     url: 'memory-of-a-desert-journey.html'
   },
   'interference': {
     title: 'Interference',
     year: '2011',
     medium: 'Video',
-    image: '../images/interference-install-view-1-1140-761-cover.jpg',
+    image: '../images/interference-hero-1.jpg',
     url: 'interference.html'
   },
   'apperception': {
     title: 'Apperception',
     year: '2011',
     medium: 'Video',
-    image: '../images/apperception01-install-1140-761-cover.jpg',
+    image: '../images/apperception-hero-1.jpg',
     url: 'apperception.html'
   }
 };
