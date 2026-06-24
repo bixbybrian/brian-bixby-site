@@ -69,7 +69,7 @@ const PROJECTS = {
     title: 'I Want To Believe',
     year: '2017',
     medium: 'Installation',
-    image: '../images/I-Want-To-Believe-IMG_9143-1140-761-e1699517294933.jpg',
+    image: '../images/i-want-to-believe-lights-on.jpg',
     url: 'i-want-to-believe.html'
   },
   'witness': {

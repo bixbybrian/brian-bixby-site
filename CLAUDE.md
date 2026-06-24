@@ -88,6 +88,46 @@ When adding a project: create `site/projects/<slug>.html`, add its entry to
 `project-relations.js`, add a tile to `projects.html`, and add a `<url>` to
 `sitemap.xml` (extensionless).
 
+## Image naming convention
+
+All images in `site/images/` follow one scheme. The guiding principle: **name an
+image by the job it does in the page layout — never by its origin (which app/social
+platform it came from) or its zoom level.**
+
+Format: `{project-slug}-{role?}-{NN}.{ext}`
+
+- `{project-slug}` matches the project's page slug (e.g. `lightvessel`,
+  `forbidden-colours`, `i-want-to-believe`), so files sort next to their project.
+- All lowercase, hyphens only — no spaces, underscores, or capitals.
+- Sequence numbers are **two digits** (`01`, `02` …) so they sort past nine.
+- **Do not** encode pixel dimensions in the filename. (Only add a `-wNNNN` token if
+  the project ever serves multiple fixed widths as separate files.)
+- Numbers count **within a role group, in page order**, and reset per group — they
+  are not one running tally down the whole page.
+
+Roles (the only standing vocabulary — add a new role word only when a real page has
+a distinct recurring section for it):
+
+```
+{slug}-NN          images of the work itself — the DEFAULT, no role word
+{slug}-hero-N      page lead image(s); hero-1, hero-2 … (slideshow / random-load ready)
+{slug}-process-NN  in-progress / making-of / installation process
+{slug}-view-NN     the work shown in place — installed, on-site, in context
+{slug}-{state}     a descriptive token replaces the number for distinct named states
+                   (e.g. lightvessel-lights-on / lightvessel-lights-off)
+```
+
+Distinct titled works inside one project carry their number as part of identity,
+right after the slug: `lightvessel-1-NN`, `lightvessel-2-NN`.
+
+Deliberately **not** roles: `detail` (a close-up belongs to whatever section it
+appears in — usually `process` or `view`) and `social` (origin is invisible to the
+visitor; a reused Instagram image is still a `view` or `process` shot).
+
+Renaming an image means updating every reference in the project's HTML **and** in
+`project-relations.js` in the same commit, or images break. Do renames as a scripted
+pass (build an old→new map, `git mv`, then rewrite references), one project at a time.
+
 ## Headers / security
 
 `site/_headers` sets a strict CSP (allows Vimeo + YouTube embeds for video),
