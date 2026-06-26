@@ -128,6 +128,28 @@ Renaming an image means updating every reference in the project's HTML **and** i
 `project-relations.js` in the same commit, or images break. Do renames as a scripted
 pass (build an old→new map, `git mv`, then rewrite references), one project at a time.
 
+## Image dimensions & ratios
+
+Every hero and project-tile image is **3:2** (1.5:1), one shape across the whole
+site for a consistent rhythm. Upload a single high-res **master per project hero at
+2400 × 1600 px (3:2), JPEG ~q80, sRGB**. The Netlify image CDN
+(`/.netlify/images?url=…&w=`) downscales that one file for the 820px hero and both
+tile grids. Never export per-size copies, and never bake dimensions into filenames.
+
+- Project-page hero: `.hero` box is `aspect-ratio: 3/2`, image `object-fit: cover`
+  (centered; tune per image with `object-position`). Renders at the 820px content
+  width so the caption and first lines of body stay above the fold.
+- `projects.html` tiles: featured 2-up, the full lead card, and the archive 3-up are
+  all `aspect-ratio: 3/2`. Tiles are pure downscales of the 3:2 hero master.
+- Until a true 3:2 master is uploaded, a non-3:2 source crops to 3:2 (consistent if
+  imperfect); replace with a 3:2 export to remove the crop.
+
+**Parked idea: 21:9 page header.** The old `projects.html` lead card was `21/9`;
+we retired it to 3:2 for tile/hero consistency. A 21:9 *banner* could still return
+later as a standalone header at the top of the Projects landing page only, but as
+an open-ended image NOT tied to any one work (so it reads as page art, not a tile).
+Not a hero/tile role; would be its own one-off.
+
 ## Headers / security
 
 `site/_headers` sets a strict CSP (allows Vimeo + YouTube embeds for video),
