@@ -81,6 +81,11 @@
     .section-label { font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
                      text-transform: uppercase; color: var(--light); margin-bottom: 14px; }
 
+    /* SOURCE PHOTO — the original photograph referenced in the body text */
+    .source-photo { margin: 48px auto 0; max-width: 480px; }
+    .source-photo img { width: 100%; height: auto; display: block; }
+    .source-photo .caption { margin-top: 10px; margin-bottom: 0; }
+
     /* LIGHTS-ON / LIGHTS-OFF VIEWER: paginated 2-col, image left, body right.
        Mirrors the IWTB pattern. Frame is 1:1 with object-fit:contain so portrait
        images fit cleanly with side padding. */
@@ -127,6 +132,7 @@
     @media (max-width: 600px) {
       nav, .back-bar, main, footer { padding-left: 18px; padding-right: 18px; }
       .project-title { font-size: 28px; }
+      .source-photo { max-width: 100%; }
       .portal-views { grid-template-columns: 1fr; gap: 14px; }
       .portal-views-nav { gap: 20px; margin-top: 20px; }
       footer { flex-direction: column; gap: 6px; text-align: center; }
@@ -162,6 +168,11 @@
       <p>For the installation I cut a rectangle out of the gallery wall and set a Xerox print into the opening, framed in wood so the image sits recessed inside the wall instead of hung on it. A red neon tube leans diagonally across the print. The photograph is of the papered-over door, which is itself still closed. The picture of a hidden doorway becomes another hidden doorway, set back into a wall the same way the original was. Whatever is behind it stays behind it.</p>
     </div>
 
+    <div class="source-photo">
+      <img src="/.netlify/images?url=/images/portal-02.jpg&w=960&q=78" srcset="/.netlify/images?url=/images/portal-02.jpg&w=400&q=78 400w, /.netlify/images?url=/images/portal-02.jpg&w=640&q=78 640w, /.netlify/images?url=/images/portal-02.jpg&w=960&q=78 960w" sizes="(max-width: 600px) 100vw, 480px" alt="Source photograph: the wallpapered-over door, abandoned apartment, Weimar" width="1601" height="2400" loading="lazy" decoding="async" />
+      <p class="caption">Source photograph of the wallpapered-over door, abandoned apartment, Weimar.</p>
+    </div>
+
     <div class="section-label">Installation Views</div>
     <div class="portal-views">
       <div class="portal-views-image">
@@ -176,7 +187,7 @@
         <div class="portal-views-caption" id="portal-view-caption"><em>Portal 001</em>, lights on.</div>
       </div>
       <div class="portal-views-body" id="portal-view-body">
-        <p>Body copy to come.</p>
+        <p>The neon is lit. Red light comes off the glass tube and washes across the Xerox print, catching the torn edge of the wallpaper and the dark gap behind it. The frame sets the image back into the wall, and the cord along the floor makes clear the piece has been switched on. The door in the photograph is still shut, but lit like this it looks like a way through.</p>
         <p class="portal-credit"><strong>Portal 001</strong>, lights on<br>Brian Bixby, 2017<br>Xerox prints, cardboard, neon tube, wood frame<br>131.5 &times; 216.5 cm</p>
       </div>
     </div>
@@ -208,7 +219,7 @@
           height:  2399,
           alt:     'Portal 001: lights on',
           caption: '<em>Portal 001</em>, lights on.',
-          body:    '<p>Body copy to come.</p>'
+          body:    '<p>The neon is lit. Red light comes off the glass tube and washes across the Xerox print, catching the torn edge of the wallpaper and the dark gap behind it. The frame sets the image back into the wall, and the cord along the floor makes clear the piece has been switched on. The door in the photograph is still shut, but lit like this it looks like a way through.</p>'
                  + '<p class="portal-credit"><strong>Portal 001</strong>, lights on<br>Brian Bixby, 2017<br>Xerox prints, cardboard, neon tube, wood frame<br>131.5 &times; 216.5 cm</p>'
         },
         {
@@ -220,7 +231,7 @@
           height:  2400,
           alt:     'Portal 001: lights off',
           caption: '<em>Portal 001</em>, lights off.',
-          body:    '<p>Body copy to come.</p>'
+          body:    '<p>The neon is off. The tube is now just a length of glass resting against the print, and the image goes flat: grey paper recessed in a wooden frame. Nothing is glowing. The cut in the wall stops looking like an opening and starts looking like a door someone closed a long time ago. The piece has gone back to being part of the wall.</p>'
                  + '<p class="portal-credit"><strong>Portal 001</strong>, lights off<br>Brian Bixby, 2017<br>Xerox prints, cardboard, neon tube, wood frame<br>131.5 &times; 216.5 cm</p>'
         }
       ];
