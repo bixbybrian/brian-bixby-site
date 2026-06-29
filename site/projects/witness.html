@@ -97,27 +97,6 @@
     .section-label { font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
                      text-transform: uppercase; color: var(--light); margin-bottom: 14px; }
 
-    /* Tombstone metadata block: sits between hero image and PROJECT OVERVIEW.
-       Compact, quiet, scannable. Title is the anchor; facts read as metadata. */
-    .tombstone {
-      margin-top: 0.625rem;     /* matches the 10px gap the hero already leaves below itself */
-      margin-bottom: 2.25rem;   /* matches .project-body's 36px rhythm so the block does
-                                   not crowd the Project Overview label */
-    }
-    .tombstone p {
-      margin: 0;
-      line-height: 1.5;
-      font-size: 0.9em;         /* slightly smaller than body; signals metadata */
-      color: var(--black);      /* palette has no softer-than-black-but-darker-than-light
-                                   token, so we differentiate from labels by typography */
-    }
-    .tombstone .tombstone-title {
-      font-style: italic;       /* matches how work titles are set in body copy */
-      font-size: 1.125em;       /* anchor; larger than the fact lines */
-      margin-bottom: 0.4em;     /* small gap separating title from the facts */
-      color: var(--black);      /* full strength */
-    }
-
     /* WITNESS THUMB GRID: 4-up at desktop, 2-up at mobile (ported from IWTB) */
     .witness-thumbs { display: grid; grid-template-columns: repeat(4, 1fr);
                       gap: 4px; margin: 16px 0 24px; }
@@ -204,13 +183,7 @@
     <h1 class="project-title">Witness</h1>
 
     <div class="hero-placeholder"><img src="/.netlify/images?url=/images/witness-hero-1.jpg&w=1140&q=78" srcset="/.netlify/images?url=/images/witness-hero-1.jpg&w=480&q=78 480w, /.netlify/images?url=/images/witness-hero-1.jpg&w=820&q=78 820w, /.netlify/images?url=/images/witness-hero-1.jpg&w=1140&q=78 1140w" sizes="(max-width: 820px) 100vw, 820px" alt="Witness" width="2400" height="1600" fetchpriority="high" /></div>
-    <div class="tombstone">
-      <p class="tombstone-title">Witness</p>
-      <p>2014</p>
-      <p>Site-specific installation: peep-hole, wood window frames, black and white Xerox prints, cardboard, tape, glue, fluorescent paint</p>
-      <p>Dimensions variable</p>
-      <p>Viehauktionshalle (Cattle Auction Hall), Marcel-Paul-Str. 57, Weimar, Germany</p>
-    </div>
+    <p class="caption"><em>Witness</em>, 2014. Site-specific installation, Viehauktionshalle, Weimar.</p>
 
     <div class="section-label">Project Overview</div>
     <div class="project-body">
