@@ -33,4 +33,7 @@
   <url><loc>https://brianbixby.com/projects/interference</loc><priority>0.8</priority></url>
   <url><loc>https://brianbixby.com/projects/apperception</loc><priority>0.8</priority></url>
 
+  <!-- Lightvessel order / configurator -->
+  <url><loc>https://brianbixby.com/lightvessel/order/</loc><priority>0.6</priority></url>
+
 </urlset>
