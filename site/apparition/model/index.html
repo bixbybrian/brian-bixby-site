@@ -439,11 +439,11 @@ function buildLightbox(which){
   if(which===2){
     cable([new THREE.Vector3(-W/2+70,-H/2+55,-dep-18), new THREE.Vector3(-W/2+70,-H/2+60,cz), new THREE.Vector3(-W/2+110,-H/2+60,cz)], M.cableA);
     cable([new THREE.Vector3(-W/2+135,-H/2+55,cz), new THREE.Vector3(-W/2+300,-H/2+70,cz)], M.cableB);
-    cable([new THREE.Vector3(-W/2+190,-H/2+60,cz), new THREE.Vector3(W/2-60,-H/2+120,cz), new THREE.Vector3(W/2-40, H/2-30, cz)], M.cableC);
+    cable([new THREE.Vector3(-W/2+190,-H/2+60,cz), new THREE.Vector3(W/2-140,-H/2+95,cz), new THREE.Vector3(W/2-90,-H/2+160,cz), new THREE.Vector3(W/2-90, H/2-30, cz)], M.cableC);
     cable([new THREE.Vector3(-W/2+520,-H/2+55,cz), new THREE.Vector3(0,-H/2+30,cz), new THREE.Vector3(0,-H/2+30,-T-40)], M.cableD);
   }else{
     cable([new THREE.Vector3(-W/2+150,-H/2+80,cz), new THREE.Vector3(-W/2+90,-H/2+20,cz)], M.cableB);
-    cable([new THREE.Vector3(W/2-40,-H/2+10,cz), new THREE.Vector3(W/2-40,-H/2+120,cz), new THREE.Vector3(W/2-30,-H/2+150,-T-P.grooveGap)], M.cableC);
+    cable([new THREE.Vector3(W/2-90,-H/2+10,cz), new THREE.Vector3(W/2-90,-H/2+120,cz), new THREE.Vector3(W/2-80,-H/2+150,-T-P.grooveGap)], M.cableC);
   }
 
   /* IR presence sensor (bottom box): BGS M18 barrel, concealed inside,
