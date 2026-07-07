@@ -233,13 +233,13 @@
     aluBand:    { name: 'Aluminum frame',   color: 0x9aa0a6, metal: 0.9, dens: 2700 },
     wood:       { name: 'Hardwood',         color: 0xb5905d, dens: 650 },
     cleat:      { name: 'Hanging rail',     color: 0xc9ad7d, dens: 650 },
-    plexiAR:    { name: 'Acrylic — museum AR',  color: 0xe8f0f4, opacity: 0.22, dens: 1190 },
-    plexiClear: { name: 'Acrylic — clear',      color: 0xdfe9ee, opacity: 0.30, dens: 1190 },
-    fluorRed:    { name: 'Acrylic — fluorescent red',    color: 0xff3524, opacity: 0.5, emissive: 0x8f0d08, dens: 1190 },
-    fluorOrange: { name: 'Acrylic — fluorescent orange', color: 0xff7a1a, opacity: 0.5, emissive: 0x8f3c06, dens: 1190 },
-    fluorYellow: { name: 'Acrylic — fluorescent yellow', color: 0xf5e03a, opacity: 0.5, emissive: 0x807207, dens: 1190 },
-    fluorGreen:  { name: 'Acrylic — fluorescent green',  color: 0x51e87c, opacity: 0.5, emissive: 0x0e7a34, dens: 1190 },
-    fluorBlue:   { name: 'Acrylic — fluorescent blue',   color: 0x3a7bf5, opacity: 0.5, emissive: 0x0d3a8f, dens: 1190 },
+    plexiAR:    { name: 'Acrylic: museum AR',  color: 0xe8f0f4, opacity: 0.22, dens: 1190 },
+    plexiClear: { name: 'Acrylic: clear',      color: 0xdfe9ee, opacity: 0.30, dens: 1190 },
+    fluorRed:    { name: 'Acrylic: fluorescent red',    color: 0xff3524, opacity: 0.5, emissive: 0x8f0d08, dens: 1190 },
+    fluorOrange: { name: 'Acrylic: fluorescent orange', color: 0xff7a1a, opacity: 0.5, emissive: 0x8f3c06, dens: 1190 },
+    fluorYellow: { name: 'Acrylic: fluorescent yellow', color: 0xf5e03a, opacity: 0.5, emissive: 0x807207, dens: 1190 },
+    fluorGreen:  { name: 'Acrylic: fluorescent green',  color: 0x51e87c, opacity: 0.5, emissive: 0x0e7a34, dens: 1190 },
+    fluorBlue:   { name: 'Acrylic: fluorescent blue',   color: 0x3a7bf5, opacity: 0.5, emissive: 0x0d3a8f, dens: 1190 },
     print:      { name: 'Archival pigment print, backlit', color: 0xf0ece2, opacity: 0.88, artwork: true, dens: 1190 },
     lgp:        { name: 'Acrylic light guide',  color: 0xe2f0f5, opacity: 0.45, dens: 1190 },
     reflector:  { name: 'Reflector film',       color: 0xf8f8f4, dens: 1400 },
@@ -250,17 +250,17 @@
 
   /* ---------- frame finishes ---------- */
   const FRAME_COLORS = {
-    aluminum:  { label: 'Raw aluminum (no paint)', color: 0x9aa0a6 },
-    red:       { label: 'Pantone Bright Red C',    color: 0xf93822 },
-    cyan:      { label: 'Pantone 2198 C',          color: 0x22e3f9 },
-    yellow:    { label: 'Pantone 603 C',           color: 0xede04b },
-    blue:      { label: 'Pantone 2726 C',          color: 0x4b58ed },
-    graphite:  { label: 'Pantone 426 C',           color: 0x25282a },
-    gold:      { label: '24K Gold coat',           color: 0xd4af37 },
-    anodClear:  { label: 'Anodized — clear/natural', color: 0xb9bec4 },
-    anodBlack:  { label: 'Anodized — black',         color: 0x1b1d1f },
-    anodBronze: { label: 'Anodized — bronze',        color: 0x6b4f35 },
-    anodGold:   { label: 'Anodized — gold',          color: 0xc9a545 }
+    aluminum:  { label: 'Raw aluminum (no paint)',   color: 0x9aa0a6 },
+    red:       { label: 'Pantone Bright Red C',      color: 0xf93822 },
+    cyan:      { label: 'Pantone 2198 C: blue',      color: 0x22e3f9 },
+    yellow:    { label: 'Pantone 603 C: yellow',     color: 0xede04b },
+    blue:      { label: 'Pantone 2726 C: blue-violet', color: 0x4b58ed },
+    graphite:  { label: 'Pantone 426 C: near-black', color: 0x25282a },
+    gold:      { label: '24K Gold coat',             color: 0xd4af37 },
+    anodClear:  { label: 'Anodized: clear/natural',  color: 0xb9bec4 },
+    anodBlack:  { label: 'Anodized: black',          color: 0x1b1d1f },
+    anodBronze: { label: 'Anodized: bronze',         color: 0x6b4f35 },
+    anodGold:   { label: 'Anodized: gold',           color: 0xc9a545 }
   };
 
   const TOP_OPTIONS = {
@@ -495,21 +495,21 @@ const LEAD_TIME = '4–6 weeks';
    follows the selected Top Plexi option. */
 const LAYER_WORDING = {
   top: {
-    plexiAR:     'Museum-grade acrylic face — 3 mm',
-    plexiClear:  'Clear acrylic face — 3 mm',
-    fluorRed:    'Fluorescent red acrylic face — 3 mm',
-    fluorOrange: 'Fluorescent orange acrylic face — 3 mm',
-    fluorYellow: 'Fluorescent yellow acrylic face — 3 mm',
-    fluorGreen:  'Fluorescent green acrylic face — 3 mm',
-    fluorBlue:   'Fluorescent blue acrylic face — 3 mm'
+    plexiAR:     'Museum-grade acrylic face: 3 mm',
+    plexiClear:  'Clear acrylic face: 3 mm',
+    fluorRed:    'Fluorescent red acrylic face: 3 mm',
+    fluorOrange: 'Fluorescent orange acrylic face: 3 mm',
+    fluorYellow: 'Fluorescent yellow acrylic face: 3 mm',
+    fluorGreen:  'Fluorescent green acrylic face: 3 mm',
+    fluorBlue:   'Fluorescent blue acrylic face: 3 mm'
   },
-  airgap:    'Spacer ring — acrylic, 2 mm',
-  print:     'Archival pigment print, backlit — 3 mm',
-  lgp:       'Light guide — acrylic, edge-lit',
-  ledEdge:   'LED illumination — perimeter',
+  airgap:    'Spacer ring: acrylic, 2 mm',
+  print:     'Custom archival pigment print, backlit: 3 mm',
+  lgp:       'Light guide: acrylic, edge-lit',
+  ledEdge:   'LED illumination: perimeter, color-calibrated',
   reflector: 'Reflector film',
-  acmBack:   'Engraved aluminum composite back — 3 mm',
-  spacerB:   'Mounting frame — hardwood, French-cleat hanging'
+  acmBack:   'Engraved aluminum composite back: 3 mm',
+  spacerB:   'Mounting frame: hand-finished hardwood, French-cleat hanging'
 };
 
 const PRESET_LABELS = {
@@ -519,8 +519,8 @@ const PRESET_LABELS = {
 
 /* labels for the remaining parts when clicked in the 3D view */
 const PART_WORDING = {
-  frameBand: () => 'Aluminum frame — ' + ((LV.FRAME_COLORS[cfg.frame.colorKey] || {}).label || ''),
-  frameLip:  () => 'Aluminum frame — face lip',
+  frameBand: () => 'Aluminum frame · ' + ((LV.FRAME_COLORS[cfg.frame.colorKey] || {}).label || ''),
+  frameLip:  () => 'Aluminum frame: face lip',
   cleat:     () => 'French-cleat hanging rail',
   driver:    () => 'LED driver (concealed)'
 };
@@ -843,7 +843,7 @@ window.addEventListener('hashchange', () => {
 /* ---------- submit order ---------- */
 function orderSummary() {
   const rows = [
-    'LIGHTVESSEL — COMMISSION REQUEST', '',
+    'LIGHTVESSEL: COMMISSION REQUEST', '',
     'Edition:        ' + PRESET_LABELS[presetKey],
     'Size:           ' + sizeCm(),
     'Top plexi:      ' + LV.TOP_OPTIONS[cfg.topMat],
@@ -857,7 +857,7 @@ function orderSummary() {
   return rows.join('\n');
 }
 function mailtoURL() {
-  const subject = 'Lightvessel commission — ' + PRESET_LABELS[presetKey] + ' · Image № ' + cfg.imageNo;
+  const subject = 'Lightvessel commission: ' + PRESET_LABELS[presetKey] + ' · Image № ' + cfg.imageNo;
   return 'mailto:' + ORDER_EMAIL + '?subject=' + encodeURIComponent(subject) +
          '&body=' + encodeURIComponent(orderSummary());
 }
@@ -884,9 +884,9 @@ $('#ordersend').onclick = () => {
       imageNo: cfg.imageNo, buildUrl: buildURL(), summary: orderSummary()
     })
   }).then(r => {
-    btn.textContent = r.ok ? 'Order sent ✓' : 'Sending failed — use Copy';
+    btn.textContent = r.ok ? 'Order sent ✓' : 'Sending failed: use Copy';
     btn.disabled = false;
-  }).catch(() => { btn.textContent = 'Sending failed — use Copy'; btn.disabled = false; });
+  }).catch(() => { btn.textContent = 'Sending failed: use Copy'; btn.disabled = false; });
 };
 $('#ordercopy').onclick = () => {
   const txt = orderSummary();
