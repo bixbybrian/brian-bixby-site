@@ -36,4 +36,7 @@
   <!-- Lightvessel order / configurator -->
   <url><loc>https://brianbixby.com/lightvessel/order/</loc><priority>0.6</priority></url>
 
+  <!-- Apparition interactive model -->
+  <url><loc>https://brianbixby.com/apparition/model/</loc><priority>0.6</priority></url>
+
 </urlset>
